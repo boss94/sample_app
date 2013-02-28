@@ -1,17 +1,82 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Simple App du Tutoriel Ruby on Rails | <%= @titre %></title>
+	<title>CarExportsUk | <%= @titre %></title>
 	<%= csrf_meta_tag %>
 	<%= render 'layouts/stylesheets' %>
 </head>
 <body>
 	<div class="container">
 		<%= render 'layouts/header' %>
-		<aside></aside>
-		<section class="round">
-			<%= yield %>
-		</section>
+		<aside class="sidebar">
+			<div class="block">
+				<div class="block-title">Business Hours</div>
+				<div class="block-content">
+					<table cellspacing="0" cellpadding="0" class="tbBusinessHours">
+						<tbody><tr>
+							<th>Day</th>
+							<th>Open</th>
+							<th>Close</th>
+						</tr>
+						<tr>
+							<td>Sat</td>
+							<td>11:00 AM</td>
+							<td>7:15 PM</td>
+						</tr>
+						<tr>
+							<td>Fri</td>
+							<td>9:45 AM</td>
+							<td>7:30 PM</td>
+						</tr>
+						<tr>
+							<td>Thu</td>
+							<td>8:45 AM</td>
+							<td>5:30 PM</td>
+						</tr>
+						<tr>
+							<td>Wed</td>
+							<td>8:45 AM</td>
+							<td>1:45 PM</td>
+						</tr>
+						<tr>
+							<td>Tue</td>
+							<td>10:00 AM</td>
+							<td>6:30 PM</td>
+						</tr>
+						<tr>
+							<td>Mon</td>
+							<td>7:45 AM</td>
+							<td>3:30 PM</td>
+						</tr>
+						<tr>
+							<td>Sun</td>
+							<td colspan="2" class="closed">--- Closed ---</td>
+						</tr>
+					</tbody></table>
+				</div>
+			</div>			
+		</aside>
+		<div id="content">
+			<section class="round">
+				<div class="block">
+					<div class="block-title">Welcome to Executive Car Dealer</div>
+					<div class="block-content">
+						<div style="float: right; width: 200px;">
+							<a href="http://maps.google.com/maps?f=q&amp;source=s_q&amp;hl=en&amp;geocode=&amp;q=123%20Sample%20Street%2CDallas%2CTX%2075207&amp;aq=0&amp;ie=UTF8&amp;hq=&amp;hnear=123%20Sample%20Street%2CDallas%2CTX%2075207&amp;z=16" class="mapImgLink">
+								<img src="http://maps.google.com/maps/api/staticmap?center=123%20Sample%20Street%2CDallas%2CTX%2075207&amp;zoom=14&amp;size=200x200&amp;maptype=roadmap&amp;markers=color:red|color:red|label:A|123%20Sample%20Street%2CDallas%2CTX%2075207&amp;sensor=false" alt="">
+								<span>View Larger Map</span>
+							</a>
+						</div>
+						<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.
+							<br><br>
+							It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+						<div class="clear">&nbsp;</div>
+					</div>
+				</div>				
+				<%= yield %>
+			</section>
+		</div>
+		<div class="clear">&nbsp;</div>
 		<%= render 'layouts/footer' %>
 	</div>
 </body>
