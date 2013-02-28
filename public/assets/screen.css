@@ -66,3 +66,108 @@ a img {
 article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary {
   display: block;
 }
+
+/* line 12, ../../app/assets/stylesheets/screen.css.scss */
+.border-radius-example {
+  width: 125px;
+  height: 125px;
+  background: red;
+  margin: 20px;
+  float: left;
+  padding: 20px;
+}
+
+/* line 21, ../../app/assets/stylesheets/screen.css.scss */
+#border-radius {
+  -webkit-border-radius: 25px;
+  -moz-border-radius: 25px;
+  -ms-border-radius: 25px;
+  -o-border-radius: 25px;
+  border-radius: 25px;
+}
+
+/* line 24, ../../app/assets/stylesheets/screen.css.scss */
+#three-column {
+  -webkit-column-count: 3;
+  -moz-column-count: 3;
+  -ms-column-count: 3;
+  -o-column-count: 3;
+  column-count: 3;
+  width: 300px;
+  margin-bottom: 20px;
+}
+
+/* line 35, ../../app/assets/stylesheets/screen.css.scss */
+body {
+  text-align: center;
+  padding: 20px 0 50px 0;
+  background: #ececec;
+  background-attachment: fixed;
+  background-repeat: repeat-x;
+  font-family: Arial,Helvetica,sans-serif;
+  font-size: 0.85em;
+  color: black;
+}
+
+/* line 45, ../../app/assets/stylesheets/screen.css.scss */
+.container {
+  text-align: left;
+  margin: 0 auto;
+  width: 800px;
+}
+
+/* line 52, ../../app/assets/stylesheets/screen.css.scss */
+nav#topnav {
+  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #1470bb), color-stop(100%, #66b4fe));
+  background-image: -webkit-linear-gradient(#1470bb, #66b4fe);
+  background-image: -moz-linear-gradient(#1470bb, #66b4fe);
+  background-image: -o-linear-gradient(#1470bb, #66b4fe);
+  background-image: linear-gradient(#1470bb, #66b4fe);
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+  border-radius: 5px;
+  display: block;
+  margin-bottom: 10px;
+  border: solid 1px #0b56b9;
+  overflow: hidden;
+}
+/* line 61, ../../app/assets/stylesheets/screen.css.scss */
+nav#topnav ul {
+  float: left;
+}
+/* line 64, ../../app/assets/stylesheets/screen.css.scss */
+nav#topnav li {
+  float: left;
+  border-right: solid 1px #0b56b9;
+}
+/* line 67, ../../app/assets/stylesheets/screen.css.scss */
+nav#topnav li a {
+  float: left;
+  padding: 0.8em 1.5em;
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 0.9em;
+}
+/* line 74, ../../app/assets/stylesheets/screen.css.scss */
+nav#topnav li a:hover {
+  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #66b4fe), color-stop(100%, #3ae0f0));
+  background-image: -webkit-linear-gradient(#66b4fe, #3ae0f0);
+  background-image: -moz-linear-gradient(#66b4fe, #3ae0f0);
+  background-image: -o-linear-gradient(#66b4fe, #3ae0f0);
+  background-image: linear-gradient(#66b4fe, #3ae0f0);
+  text-decoration: underline;
+}
+
+/* line 83, ../../app/assets/stylesheets/screen.css.scss */
+aside {
+  float: right;
+  width: 200px;
+}
+
+/* line 87, ../../app/assets/stylesheets/screen.css.scss */
+section {
+  float: right;
+}
