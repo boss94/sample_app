@@ -2,9 +2,17 @@
 // Feel free to delete these if you want keep the defaults:
 
 $blueprint-grid-columns: 24;
-$blueprint-container-size: 950px;
+$blueprint-container-size: 800px;
 $blueprint-grid-margin: 10px;
+//$blueprint_grid_width: 40px;
 
 // Use this to calculate the width based on the total width.
 // Or you can set $blueprint-grid-width to a fixed value and unset $blueprint-container-size -- it will be calculated for you.
 $blueprint-grid-width: ($blueprint-container-size + $blueprint-grid-margin) / $blueprint-grid-columns - $blueprint-grid-margin;
+
+//CarExportsUK
+$bgColor: #ececec; 
+$color1: #1470bb;
+$color2: #66b4fe;
+$color3: #3ae0f0;
+
