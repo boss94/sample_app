@@ -604,9 +604,10 @@ nav#topnav {
 * html nav#topnav {
   overflow-x: hidden;
 }
-/* line 46, ../../app/assets/stylesheets/partials/_horizontal_menu.css.scss */
+/* line 45, ../../app/assets/stylesheets/partials/_horizontal_menu.css.scss */
 nav#topnav ul {
   float: left;
+  line-height: 1.0;
 }
 /* line 49, ../../app/assets/stylesheets/partials/_horizontal_menu.css.scss */
 nav#topnav li {
@@ -644,15 +645,16 @@ nav#topnav li a:hover {
   -o-background-size: 100% 18px, auto;
   background-size: 100% 18px, auto;
   background-position: left top;
+  line-height: 1;
 }
 
-/* line 27, ../../app/assets/stylesheets/screen.css.scss */
+/* line 28, ../../app/assets/stylesheets/screen.css.scss */
 aside {
   float: right;
   width: 200px;
 }
 
-/* line 31, ../../app/assets/stylesheets/screen.css.scss */
+/* line 32, ../../app/assets/stylesheets/screen.css.scss */
 section {
   float: right;
 }

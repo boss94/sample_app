@@ -38,13 +38,13 @@ nav#topnav {
   @include border-radius(5px);
   display: block;
   height: 30px;
-  //line-height: 30px;
   margin-bottom: 10px;
   border: solid 1px #0b56b9;
   overflow: hidden; 
   @include column($blueprint-grid-columns);
   ul {
     float: left;
+    line-height: 1.0;
   }
   li {
     float: left;
