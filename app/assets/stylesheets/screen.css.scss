@@ -17,12 +17,11 @@
 @import "partials/two_col";
 @import "partials/horizontal_menu";
 
-@include sticky-footer(50px, "#root", "#root-footer", "footer");
+//@include sticky-footer(50px, "#root", "#root-footer", "footer");
 
 //Style
 body {
 	text-align: center;
-	//padding: 20px 0 50px 0;
 	background: {
 		image: url("bg.gif"); 
 		color: $bgColor;
@@ -34,30 +33,37 @@ body {
 	color: black;
 }
 
-.container {
-	//line-height: 1;
+.container, footer {	
 	//@include showgrid;
 	text-align: left;
 }
 
 //footer
+#root-footer {
+	clear: both;
+}
 footer {
-	height: 50px;
-	ul {
-		float: left;
+	padding: 10px;
+	font-size: 0.85em;
+	color:#666;
+	//height: 30px;//same as the sticky footer function used above
+	.credit {
+		float: right;
 	}
-	li {
-		float: left;
-		a {
-			float: left;
-			padding: .8em 1.5em;
-			text-decoration: none;
+	ul {
+		padding-top: 5px;
+		li {
+			display: inline;
 		}
+	}
+	a {
+		color: #006dc0;
 	}
 }
 
 //All sections
 section {
+	margin-bottom: 10px;
 	h1 {
 		@include background-image(linear-gradient($sTitleColor1, $sTitleColor2));
 		@include border-top-radius(5px);
@@ -80,7 +86,7 @@ section {
 }
 
 //Business Hours section
-table.tbBusinessHours {
+#businessHours table {
 	font-size: 0.85em;
 	th, td {
 		padding: 2px 2px 2px 5px;
@@ -89,5 +95,24 @@ table.tbBusinessHours {
 	th {
 		background: #eee;
 	}
+}
+
+//Inventory Search
+#inventory-search li {
+	padding-bottom: 10px;
+	display: block;
+	label {
+		display: block;
+		padding-bottom: 5px;
+	}
+	select {
+		width: $blueprint-container-size * 1/5;
+		padding: 3px;
+	}
+}
+
+//Inventory-List
+#inventory-list {
+	
 }
 

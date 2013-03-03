@@ -456,25 +456,25 @@ form.bp textarea {
   height: 250px;
 }
 
-/* line 25, ../../app/assets/stylesheets/partials/_two_col.css.scss */
-body.two-col .container {
+/* line 26, ../../app/assets/stylesheets/partials/_two_col.css.scss */
+body.two-col .container, body.two-col footer {
   width: 800px;
   margin: 0 auto;
   overflow: hidden;
   *zoom: 1;
 }
-/* line 28, ../../app/assets/stylesheets/partials/_two_col.css.scss */
-body.two-col header, body.two-col footer {
+/* line 30, ../../app/assets/stylesheets/partials/_two_col.css.scss */
+body.two-col header {
   display: inline;
   float: left;
   margin-right: 10px;
   width: 800px;
 }
 /* line 147, ../../../../.rvm/gems/ruby-1.9.3-p385/gems/compass-0.12.2/frameworks/blueprint/stylesheets/blueprint/_grid.scss */
-* html body.two-col header, * html body.two-col footer {
+* html body.two-col header {
   overflow-x: hidden;
 }
-/* line 31, ../../app/assets/stylesheets/partials/_two_col.css.scss */
+/* line 33, ../../app/assets/stylesheets/partials/_two_col.css.scss */
 body.two-col aside.sidebar {
   display: inline;
   float: left;
@@ -485,7 +485,7 @@ body.two-col aside.sidebar {
 * html body.two-col aside.sidebar {
   overflow-x: hidden;
 }
-/* line 37, ../../app/assets/stylesheets/partials/_two_col.css.scss */
+/* line 39, ../../app/assets/stylesheets/partials/_two_col.css.scss */
 body.two-col #content {
   display: inline;
   float: left;
@@ -544,31 +544,6 @@ nav#topnav li a:hover {
   text-decoration: underline;
 }
 
-/* line 10, ../../../../.rvm/gems/ruby-1.9.3-p385/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/layout/_sticky-footer.scss */
-html, body {
-  height: 100%;
-}
-
-/* line 12, ../../../../.rvm/gems/ruby-1.9.3-p385/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/layout/_sticky-footer.scss */
-#root {
-  clear: both;
-  min-height: 100%;
-  height: auto !important;
-  height: 100%;
-  margin-bottom: -50px;
-}
-/* line 18, ../../../../.rvm/gems/ruby-1.9.3-p385/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/layout/_sticky-footer.scss */
-#root #root-footer {
-  height: 50px;
-}
-
-/* line 20, ../../../../.rvm/gems/ruby-1.9.3-p385/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/layout/_sticky-footer.scss */
-footer {
-  clear: both;
-  position: relative;
-  height: 50px;
-}
-
 /* line 23, ../../app/assets/stylesheets/screen.css.scss */
 body {
   text-align: center;
@@ -581,31 +556,44 @@ body {
   color: black;
 }
 
-/* line 37, ../../app/assets/stylesheets/screen.css.scss */
-.container {
+/* line 36, ../../app/assets/stylesheets/screen.css.scss */
+.container, footer {
   text-align: left;
 }
 
-/* line 44, ../../app/assets/stylesheets/screen.css.scss */
-footer {
-  height: 50px;
-}
-/* line 46, ../../app/assets/stylesheets/screen.css.scss */
-footer ul {
-  float: left;
-}
-/* line 49, ../../app/assets/stylesheets/screen.css.scss */
-footer li {
-  float: left;
-}
-/* line 51, ../../app/assets/stylesheets/screen.css.scss */
-footer li a {
-  float: left;
-  padding: 0.8em 1.5em;
-  text-decoration: none;
+/* line 42, ../../app/assets/stylesheets/screen.css.scss */
+#root-footer {
+  clear: both;
 }
 
-/* line 61, ../../app/assets/stylesheets/screen.css.scss */
+/* line 45, ../../app/assets/stylesheets/screen.css.scss */
+footer {
+  padding: 10px;
+  font-size: 0.85em;
+  color: #666;
+}
+/* line 50, ../../app/assets/stylesheets/screen.css.scss */
+footer .credit {
+  float: right;
+}
+/* line 53, ../../app/assets/stylesheets/screen.css.scss */
+footer ul {
+  padding-top: 5px;
+}
+/* line 55, ../../app/assets/stylesheets/screen.css.scss */
+footer ul li {
+  display: inline;
+}
+/* line 59, ../../app/assets/stylesheets/screen.css.scss */
+footer a {
+  color: #006dc0;
+}
+
+/* line 65, ../../app/assets/stylesheets/screen.css.scss */
+section {
+  margin-bottom: 10px;
+}
+/* line 67, ../../app/assets/stylesheets/screen.css.scss */
 section h1 {
   background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #000000), color-stop(100%, #666666));
   background-image: -webkit-linear-gradient(#000000, #666666);
@@ -626,7 +614,7 @@ section h1 {
   font-weight: bold;
   color: #fff;
 }
-/* line 74, ../../app/assets/stylesheets/screen.css.scss */
+/* line 80, ../../app/assets/stylesheets/screen.css.scss */
 section div.section-content {
   -moz-border-radius-bottomleft: 5px;
   -webkit-border-bottom-left-radius: 5px;
@@ -639,16 +627,32 @@ section div.section-content {
   border: 1px solid #cccccc;
 }
 
-/* line 83, ../../app/assets/stylesheets/screen.css.scss */
-table.tbBusinessHours {
+/* line 89, ../../app/assets/stylesheets/screen.css.scss */
+#businessHours table {
   font-size: 0.85em;
 }
-/* line 85, ../../app/assets/stylesheets/screen.css.scss */
-table.tbBusinessHours th, table.tbBusinessHours td {
+/* line 91, ../../app/assets/stylesheets/screen.css.scss */
+#businessHours table th, #businessHours table td {
   padding: 2px 2px 2px 5px;
   border-bottom: 1px solid #cccccc;
 }
-/* line 89, ../../app/assets/stylesheets/screen.css.scss */
-table.tbBusinessHours th {
+/* line 95, ../../app/assets/stylesheets/screen.css.scss */
+#businessHours table th {
   background: #eee;
+}
+
+/* line 101, ../../app/assets/stylesheets/screen.css.scss */
+#inventory-search li {
+  padding-bottom: 10px;
+  display: block;
+}
+/* line 104, ../../app/assets/stylesheets/screen.css.scss */
+#inventory-search li label {
+  display: block;
+  padding-bottom: 5px;
+}
+/* line 108, ../../app/assets/stylesheets/screen.css.scss */
+#inventory-search li select {
+  width: 160px;
+  padding: 3px;
 }

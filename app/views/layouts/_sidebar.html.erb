@@ -1,0 +1,67 @@
+<section id="businessHours">
+	<h1>Business Hours</h1>
+	<div class="section-content">
+		<table class="tbBusinessHours">
+			<tbody><tr>
+				<th>Day</th>
+				<th>Open</th>
+				<th>Close</th>
+			</tr>
+			<tr>
+				<td>Sat</td>
+				<td>11:00 AM</td>
+				<td>7:15 PM</td>
+			</tr>
+			<tr>
+				<td>Fri</td>
+				<td>9:45 AM</td>
+				<td>7:30 PM</td>
+			</tr>
+			<tr>
+				<td>Thu</td>
+				<td>8:45 AM</td>
+				<td>5:30 PM</td>
+			</tr>
+			<tr>
+				<td>Wed</td>
+				<td>8:45 AM</td>
+				<td>1:45 PM</td>
+			</tr>
+			<tr>
+				<td>Tue</td>
+				<td>10:00 AM</td>
+				<td>6:30 PM</td>
+			</tr>
+			<tr>
+				<td>Mon</td>
+				<td>7:45 AM</td>
+				<td>3:30 PM</td>
+			</tr>
+			<tr>
+				<td>Sun</td>
+				<td colspan="2" class="closed">--- Closed ---</td>
+			</tr>
+		</tbody></table>				
+	</div>
+</section>
+
+<section id="inventory-search">
+	<h1>INVENTORY SEARCH</h1>
+	<div class="section-content">
+		<form action="/inventory" method="get">
+			<ul class="StandardForm InventorySearch">
+				<li>
+					<label for="search[make]">Make</label>
+					<select name="search[make]" class="select " id="SearchMake" onchange="searchFilterModels(this)"><option value="">Any</option><option value="82">BMW</option><option value="569">Jeep</option><option value="637">Mazda</option><option value="891">Toyota</option><option value="956">Volvo</option></select>                
+				</li>
+				<li>
+					<label for="search[model]">Model</label>
+					<select name="search[model]" class="select " id="SearchModel"><option value="">Any</option><option value="84">5 Series</option><option value="895">Corolla</option><option value="571">Grand Cherokee</option><option value="649">MAZDA3</option><option value="963">S40</option></select>
+				</li>
+				<li>
+					<input type="submit" name="action" value="Search" class="button">
+				</li>
+			</ul>
+		</form>		
+	</div>
+</section>
