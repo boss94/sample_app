@@ -1,3 +1,62 @@
+/* line 4, ../../../../.rvm/gems/ruby-1.9.3-p385/gems/compass-0.12.2/frameworks/blueprint/stylesheets/blueprint/reset/_utilities.scss */
+html {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+/* line 18, ../../../../.rvm/gems/ruby-1.9.3-p385/gems/compass-0.12.2/frameworks/blueprint/stylesheets/blueprint/reset/_utilities.scss */
+.bp-reset-element, body, h1, h2, h3, h4, h5, h6, article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary, blockquote, q, th, td, caption, table,
+div, span, object, iframe, p,
+pre, a, abbr, acronym, address,
+code, del, dfn, em, img,
+dl, dt, dd, ol, ul, li, fieldset,
+form, label, legend,
+caption, tbody, tfoot, thead, tr {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-weight: inherit;
+  font-style: inherit;
+  font-size: 100%;
+  font-family: inherit;
+  vertical-align: baseline;
+}
+
+/* line 20, ../../../../.rvm/gems/ruby-1.9.3-p385/gems/compass-0.12.2/frameworks/blueprint/stylesheets/blueprint/reset/_utilities.scss */
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary {
+  display: block;
+}
+
+/* line 21, ../../../../.rvm/gems/ruby-1.9.3-p385/gems/compass-0.12.2/frameworks/blueprint/stylesheets/blueprint/reset/_utilities.scss */
+blockquote, q {
+  quotes: "" "";
+}
+/* line 67, ../../../../.rvm/gems/ruby-1.9.3-p385/gems/compass-0.12.2/frameworks/blueprint/stylesheets/blueprint/reset/_utilities.scss */
+blockquote:before, blockquote:after, q:before, q:after {
+  content: "";
+}
+
+/* line 22, ../../../../.rvm/gems/ruby-1.9.3-p385/gems/compass-0.12.2/frameworks/blueprint/stylesheets/blueprint/reset/_utilities.scss */
+th, td, caption {
+  float: none !important;
+  text-align: left;
+  font-weight: normal;
+  vertical-align: middle;
+}
+
+/* line 23, ../../../../.rvm/gems/ruby-1.9.3-p385/gems/compass-0.12.2/frameworks/blueprint/stylesheets/blueprint/reset/_utilities.scss */
+table {
+  border-collapse: separate;
+  border-spacing: 0;
+  vertical-align: middle;
+}
+
+/* line 24, ../../../../.rvm/gems/ruby-1.9.3-p385/gems/compass-0.12.2/frameworks/blueprint/stylesheets/blueprint/reset/_utilities.scss */
+a img {
+  border: none;
+}
+
 /* line 17, ../../../../.rvm/gems/ruby-1.9.3-p385/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
@@ -61,15 +120,6 @@ a img {
 /* line 116, ../../../../.rvm/gems/ruby-1.9.3-p385/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary {
   display: block;
-}
-
-/* line 23, ../../app/assets/stylesheets/partials/_base.css.scss */
-table {
-  width: 100%;
-}
-/* line 25, ../../app/assets/stylesheets/partials/_base.css.scss */
-table th {
-  font-weight: bold;
 }
 
 /* line 9, ../../app/assets/stylesheets/partials/_page.css.scss */
@@ -479,7 +529,7 @@ body.two-col aside.sidebar {
   display: inline;
   float: left;
   margin-right: 0;
-  width: 192.5px;
+  width: 260px;
 }
 /* line 147, ../../../../.rvm/gems/ruby-1.9.3-p385/gems/compass-0.12.2/frameworks/blueprint/stylesheets/blueprint/_grid.scss */
 * html body.two-col aside.sidebar {
@@ -490,14 +540,45 @@ body.two-col #content {
   display: inline;
   float: left;
   margin-right: 10px;
-  width: 597.5px;
+  width: 530px;
 }
 /* line 147, ../../../../.rvm/gems/ruby-1.9.3-p385/gems/compass-0.12.2/frameworks/blueprint/stylesheets/blueprint/_grid.scss */
 * html body.two-col #content {
   overflow-x: hidden;
 }
 
-/* line 3, ../../app/assets/stylesheets/partials/_horizontal_menu.css.scss */
+/*
+nav#topnav {
+  @include background-image(linear-gradient($color1, $color2));
+  @include border-radius(5px);
+  display: block;
+  //height: 30px;
+  //line-height: 30px;
+  margin-bottom: 10px;
+  border: solid 1px #0b56b9;
+  overflow: hidden; 
+  ul {
+    float: left;
+  }
+  li {
+    float: left;
+    border-right: solid 1px #0b56b9;  
+    a {
+      float: left;
+      padding: .8em 1.5em;
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 0.9em;
+      &:hover{
+        @include background-image(linear-gradient($color2, $color3));
+        text-decoration: underline;
+      }
+    }
+  }
+}
+*/
+/* line 36, ../../app/assets/stylesheets/partials/_horizontal_menu.css.scss */
 nav#topnav {
   background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #1470bb), color-stop(100%, #66b4fe));
   background-image: -webkit-linear-gradient(#1470bb, #66b4fe);
@@ -511,21 +592,29 @@ nav#topnav {
   border-radius: 5px;
   display: block;
   height: 30px;
-  line-height: 1;
   margin-bottom: 10px;
   border: solid 1px #0b56b9;
   overflow: hidden;
+  display: inline;
+  float: left;
+  margin-right: 10px;
+  width: 800px;
 }
-/* line 13, ../../app/assets/stylesheets/partials/_horizontal_menu.css.scss */
+/* line 147, ../../../../.rvm/gems/ruby-1.9.3-p385/gems/compass-0.12.2/frameworks/blueprint/stylesheets/blueprint/_grid.scss */
+* html nav#topnav {
+  overflow-x: hidden;
+}
+/* line 45, ../../app/assets/stylesheets/partials/_horizontal_menu.css.scss */
 nav#topnav ul {
   float: left;
+  line-height: 1.0;
 }
-/* line 16, ../../app/assets/stylesheets/partials/_horizontal_menu.css.scss */
+/* line 49, ../../app/assets/stylesheets/partials/_horizontal_menu.css.scss */
 nav#topnav li {
   float: left;
   border-right: solid 1px #0b56b9;
 }
-/* line 19, ../../app/assets/stylesheets/partials/_horizontal_menu.css.scss */
+/* line 52, ../../app/assets/stylesheets/partials/_horizontal_menu.css.scss */
 nav#topnav li a {
   float: left;
   padding: 0.8em 1.5em;
@@ -534,7 +623,7 @@ nav#topnav li a {
   font-weight: bold;
   font-size: 0.9em;
 }
-/* line 26, ../../app/assets/stylesheets/partials/_horizontal_menu.css.scss */
+/* line 59, ../../app/assets/stylesheets/partials/_horizontal_menu.css.scss */
 nav#topnav li a:hover {
   background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #66b4fe), color-stop(100%, #3ae0f0));
   background-image: -webkit-linear-gradient(#66b4fe, #3ae0f0);
@@ -544,111 +633,28 @@ nav#topnav li a:hover {
   text-decoration: underline;
 }
 
-/* line 10, ../../../../.rvm/gems/ruby-1.9.3-p385/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/layout/_sticky-footer.scss */
-html, body {
-  height: 100%;
-}
-
-/* line 12, ../../../../.rvm/gems/ruby-1.9.3-p385/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/layout/_sticky-footer.scss */
-#root {
-  clear: both;
-  min-height: 100%;
-  height: auto !important;
-  height: 100%;
-  margin-bottom: -50px;
-}
-/* line 18, ../../../../.rvm/gems/ruby-1.9.3-p385/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/layout/_sticky-footer.scss */
-#root #root-footer {
-  height: 50px;
-}
-
-/* line 20, ../../../../.rvm/gems/ruby-1.9.3-p385/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/layout/_sticky-footer.scss */
-footer {
-  clear: both;
-  position: relative;
-  height: 50px;
-}
-
-/* line 23, ../../app/assets/stylesheets/screen.css.scss */
-body {
-  text-align: center;
-  background-image: url("bg.gif");
-  background-color: #ececec;
-  background-attachment: fixed;
-  background-repeat: repeat-x;
-  font-family: Arial,Helvetica,sans-serif;
-  font-size: 0.85em;
-  color: black;
-}
-
-/* line 37, ../../app/assets/stylesheets/screen.css.scss */
+/* line 22, ../../app/assets/stylesheets/screen.css.scss */
 .container {
-  text-align: left;
+  background-image: -webkit-gradient(linear, 50% 100%, 50% 0%, color-stop(5%, rgba(0, 0, 0, 0.5)), color-stop(5%, rgba(0, 0, 0, 0))), -webkit-gradient(linear, 0% 50%, 810 50%, color-stop(0%, rgba(0, 0, 0, 0)), color-stop(0%, rgba(100, 100, 225, 0.25)), color-stop(2.9321%, rgba(100, 100, 225, 0.25)), color-stop(2.9321%, rgba(0, 0, 0, 0)), color-stop(4.16667%, rgba(0, 0, 0, 0)), color-stop(4.16667%, rgba(100, 100, 225, 0.25)), color-stop(7.09877%, rgba(100, 100, 225, 0.25)), color-stop(7.09877%, rgba(0, 0, 0, 0)), color-stop(8.33333%, rgba(0, 0, 0, 0)), color-stop(8.33333%, rgba(100, 100, 225, 0.25)), color-stop(11.26543%, rgba(100, 100, 225, 0.25)), color-stop(11.26543%, rgba(0, 0, 0, 0)), color-stop(12.5%, rgba(0, 0, 0, 0)), color-stop(12.5%, rgba(100, 100, 225, 0.25)), color-stop(15.4321%, rgba(100, 100, 225, 0.25)), color-stop(15.4321%, rgba(0, 0, 0, 0)), color-stop(16.66667%, rgba(0, 0, 0, 0)), color-stop(16.66667%, rgba(100, 100, 225, 0.25)), color-stop(19.59877%, rgba(100, 100, 225, 0.25)), color-stop(19.59877%, rgba(0, 0, 0, 0)), color-stop(20.83333%, rgba(0, 0, 0, 0)), color-stop(20.83333%, rgba(100, 100, 225, 0.25)), color-stop(23.76543%, rgba(100, 100, 225, 0.25)), color-stop(23.76543%, rgba(0, 0, 0, 0)), color-stop(25%, rgba(0, 0, 0, 0)), color-stop(25%, rgba(100, 100, 225, 0.25)), color-stop(27.9321%, rgba(100, 100, 225, 0.25)), color-stop(27.9321%, rgba(0, 0, 0, 0)), color-stop(29.16667%, rgba(0, 0, 0, 0)), color-stop(29.16667%, rgba(100, 100, 225, 0.25)), color-stop(32.09877%, rgba(100, 100, 225, 0.25)), color-stop(32.09877%, rgba(0, 0, 0, 0)), color-stop(33.33333%, rgba(0, 0, 0, 0)), color-stop(33.33333%, rgba(100, 100, 225, 0.25)), color-stop(36.26543%, rgba(100, 100, 225, 0.25)), color-stop(36.26543%, rgba(0, 0, 0, 0)), color-stop(37.5%, rgba(0, 0, 0, 0)), color-stop(37.5%, rgba(100, 100, 225, 0.25)), color-stop(40.4321%, rgba(100, 100, 225, 0.25)), color-stop(40.4321%, rgba(0, 0, 0, 0)), color-stop(41.66667%, rgba(0, 0, 0, 0)), color-stop(41.66667%, rgba(100, 100, 225, 0.25)), color-stop(44.59877%, rgba(100, 100, 225, 0.25)), color-stop(44.59877%, rgba(0, 0, 0, 0)), color-stop(45.83333%, rgba(0, 0, 0, 0)), color-stop(45.83333%, rgba(100, 100, 225, 0.25)), color-stop(48.76543%, rgba(100, 100, 225, 0.25)), color-stop(48.76543%, rgba(0, 0, 0, 0)), color-stop(50%, rgba(0, 0, 0, 0)), color-stop(50%, rgba(100, 100, 225, 0.25)), color-stop(52.9321%, rgba(100, 100, 225, 0.25)), color-stop(52.9321%, rgba(0, 0, 0, 0)), color-stop(54.16667%, rgba(0, 0, 0, 0)), color-stop(54.16667%, rgba(100, 100, 225, 0.25)), color-stop(57.09877%, rgba(100, 100, 225, 0.25)), color-stop(57.09877%, rgba(0, 0, 0, 0)), color-stop(58.33333%, rgba(0, 0, 0, 0)), color-stop(58.33333%, rgba(100, 100, 225, 0.25)), color-stop(61.26543%, rgba(100, 100, 225, 0.25)), color-stop(61.26543%, rgba(0, 0, 0, 0)), color-stop(62.5%, rgba(0, 0, 0, 0)), color-stop(62.5%, rgba(100, 100, 225, 0.25)), color-stop(65.4321%, rgba(100, 100, 225, 0.25)), color-stop(65.4321%, rgba(0, 0, 0, 0)), color-stop(66.66667%, rgba(0, 0, 0, 0)), color-stop(66.66667%, rgba(100, 100, 225, 0.25)), color-stop(69.59877%, rgba(100, 100, 225, 0.25)), color-stop(69.59877%, rgba(0, 0, 0, 0)), color-stop(70.83333%, rgba(0, 0, 0, 0)), color-stop(70.83333%, rgba(100, 100, 225, 0.25)), color-stop(73.76543%, rgba(100, 100, 225, 0.25)), color-stop(73.76543%, rgba(0, 0, 0, 0)), color-stop(75%, rgba(0, 0, 0, 0)), color-stop(75%, rgba(100, 100, 225, 0.25)), color-stop(77.9321%, rgba(100, 100, 225, 0.25)), color-stop(77.9321%, rgba(0, 0, 0, 0)), color-stop(79.16667%, rgba(0, 0, 0, 0)), color-stop(79.16667%, rgba(100, 100, 225, 0.25)), color-stop(82.09877%, rgba(100, 100, 225, 0.25)), color-stop(82.09877%, rgba(0, 0, 0, 0)), color-stop(83.33333%, rgba(0, 0, 0, 0)), color-stop(83.33333%, rgba(100, 100, 225, 0.25)), color-stop(86.26543%, rgba(100, 100, 225, 0.25)), color-stop(86.26543%, rgba(0, 0, 0, 0)), color-stop(87.5%, rgba(0, 0, 0, 0)), color-stop(87.5%, rgba(100, 100, 225, 0.25)), color-stop(90.4321%, rgba(100, 100, 225, 0.25)), color-stop(90.4321%, rgba(0, 0, 0, 0)), color-stop(91.66667%, rgba(0, 0, 0, 0)), color-stop(91.66667%, rgba(100, 100, 225, 0.25)), color-stop(94.59877%, rgba(100, 100, 225, 0.25)), color-stop(94.59877%, rgba(0, 0, 0, 0)), color-stop(95.83333%, rgba(0, 0, 0, 0)), color-stop(95.83333%, rgba(100, 100, 225, 0.25)), color-stop(98.76543%, rgba(100, 100, 225, 0.25)), color-stop(98.76543%, rgba(0, 0, 0, 0)), color-stop(100%, rgba(0, 0, 0, 0)));
+  background-image: -webkit-linear-gradient(bottom, rgba(0, 0, 0, 0.5) 5%, rgba(0, 0, 0, 0) 5%), -webkit-linear-gradient(left, rgba(0, 0, 0, 0) 0px, rgba(100, 100, 225, 0.25) 0px, rgba(100, 100, 225, 0.25) 23.75px, rgba(0, 0, 0, 0) 23.75px, rgba(0, 0, 0, 0) 33.75px, rgba(100, 100, 225, 0.25) 33.75px, rgba(100, 100, 225, 0.25) 57.5px, rgba(0, 0, 0, 0) 57.5px, rgba(0, 0, 0, 0) 67.5px, rgba(100, 100, 225, 0.25) 67.5px, rgba(100, 100, 225, 0.25) 91.25px, rgba(0, 0, 0, 0) 91.25px, rgba(0, 0, 0, 0) 101.25px, rgba(100, 100, 225, 0.25) 101.25px, rgba(100, 100, 225, 0.25) 125px, rgba(0, 0, 0, 0) 125px, rgba(0, 0, 0, 0) 135px, rgba(100, 100, 225, 0.25) 135px, rgba(100, 100, 225, 0.25) 158.75px, rgba(0, 0, 0, 0) 158.75px, rgba(0, 0, 0, 0) 168.75px, rgba(100, 100, 225, 0.25) 168.75px, rgba(100, 100, 225, 0.25) 192.5px, rgba(0, 0, 0, 0) 192.5px, rgba(0, 0, 0, 0) 202.5px, rgba(100, 100, 225, 0.25) 202.5px, rgba(100, 100, 225, 0.25) 226.25px, rgba(0, 0, 0, 0) 226.25px, rgba(0, 0, 0, 0) 236.25px, rgba(100, 100, 225, 0.25) 236.25px, rgba(100, 100, 225, 0.25) 260px, rgba(0, 0, 0, 0) 260px, rgba(0, 0, 0, 0) 270px, rgba(100, 100, 225, 0.25) 270px, rgba(100, 100, 225, 0.25) 293.75px, rgba(0, 0, 0, 0) 293.75px, rgba(0, 0, 0, 0) 303.75px, rgba(100, 100, 225, 0.25) 303.75px, rgba(100, 100, 225, 0.25) 327.5px, rgba(0, 0, 0, 0) 327.5px, rgba(0, 0, 0, 0) 337.5px, rgba(100, 100, 225, 0.25) 337.5px, rgba(100, 100, 225, 0.25) 361.25px, rgba(0, 0, 0, 0) 361.25px, rgba(0, 0, 0, 0) 371.25px, rgba(100, 100, 225, 0.25) 371.25px, rgba(100, 100, 225, 0.25) 395px, rgba(0, 0, 0, 0) 395px, rgba(0, 0, 0, 0) 405px, rgba(100, 100, 225, 0.25) 405px, rgba(100, 100, 225, 0.25) 428.75px, rgba(0, 0, 0, 0) 428.75px, rgba(0, 0, 0, 0) 438.75px, rgba(100, 100, 225, 0.25) 438.75px, rgba(100, 100, 225, 0.25) 462.5px, rgba(0, 0, 0, 0) 462.5px, rgba(0, 0, 0, 0) 472.5px, rgba(100, 100, 225, 0.25) 472.5px, rgba(100, 100, 225, 0.25) 496.25px, rgba(0, 0, 0, 0) 496.25px, rgba(0, 0, 0, 0) 506.25px, rgba(100, 100, 225, 0.25) 506.25px, rgba(100, 100, 225, 0.25) 530px, rgba(0, 0, 0, 0) 530px, rgba(0, 0, 0, 0) 540px, rgba(100, 100, 225, 0.25) 540px, rgba(100, 100, 225, 0.25) 563.75px, rgba(0, 0, 0, 0) 563.75px, rgba(0, 0, 0, 0) 573.75px, rgba(100, 100, 225, 0.25) 573.75px, rgba(100, 100, 225, 0.25) 597.5px, rgba(0, 0, 0, 0) 597.5px, rgba(0, 0, 0, 0) 607.5px, rgba(100, 100, 225, 0.25) 607.5px, rgba(100, 100, 225, 0.25) 631.25px, rgba(0, 0, 0, 0) 631.25px, rgba(0, 0, 0, 0) 641.25px, rgba(100, 100, 225, 0.25) 641.25px, rgba(100, 100, 225, 0.25) 665px, rgba(0, 0, 0, 0) 665px, rgba(0, 0, 0, 0) 675px, rgba(100, 100, 225, 0.25) 675px, rgba(100, 100, 225, 0.25) 698.75px, rgba(0, 0, 0, 0) 698.75px, rgba(0, 0, 0, 0) 708.75px, rgba(100, 100, 225, 0.25) 708.75px, rgba(100, 100, 225, 0.25) 732.5px, rgba(0, 0, 0, 0) 732.5px, rgba(0, 0, 0, 0) 742.5px, rgba(100, 100, 225, 0.25) 742.5px, rgba(100, 100, 225, 0.25) 766.25px, rgba(0, 0, 0, 0) 766.25px, rgba(0, 0, 0, 0) 776.25px, rgba(100, 100, 225, 0.25) 776.25px, rgba(100, 100, 225, 0.25) 800px, rgba(0, 0, 0, 0) 800px, rgba(0, 0, 0, 0) 810px);
+  background-image: -moz-linear-gradient(bottom, rgba(0, 0, 0, 0.5) 5%, rgba(0, 0, 0, 0) 5%), -moz-linear-gradient(left, rgba(0, 0, 0, 0) 0px, rgba(100, 100, 225, 0.25) 0px, rgba(100, 100, 225, 0.25) 23.75px, rgba(0, 0, 0, 0) 23.75px, rgba(0, 0, 0, 0) 33.75px, rgba(100, 100, 225, 0.25) 33.75px, rgba(100, 100, 225, 0.25) 57.5px, rgba(0, 0, 0, 0) 57.5px, rgba(0, 0, 0, 0) 67.5px, rgba(100, 100, 225, 0.25) 67.5px, rgba(100, 100, 225, 0.25) 91.25px, rgba(0, 0, 0, 0) 91.25px, rgba(0, 0, 0, 0) 101.25px, rgba(100, 100, 225, 0.25) 101.25px, rgba(100, 100, 225, 0.25) 125px, rgba(0, 0, 0, 0) 125px, rgba(0, 0, 0, 0) 135px, rgba(100, 100, 225, 0.25) 135px, rgba(100, 100, 225, 0.25) 158.75px, rgba(0, 0, 0, 0) 158.75px, rgba(0, 0, 0, 0) 168.75px, rgba(100, 100, 225, 0.25) 168.75px, rgba(100, 100, 225, 0.25) 192.5px, rgba(0, 0, 0, 0) 192.5px, rgba(0, 0, 0, 0) 202.5px, rgba(100, 100, 225, 0.25) 202.5px, rgba(100, 100, 225, 0.25) 226.25px, rgba(0, 0, 0, 0) 226.25px, rgba(0, 0, 0, 0) 236.25px, rgba(100, 100, 225, 0.25) 236.25px, rgba(100, 100, 225, 0.25) 260px, rgba(0, 0, 0, 0) 260px, rgba(0, 0, 0, 0) 270px, rgba(100, 100, 225, 0.25) 270px, rgba(100, 100, 225, 0.25) 293.75px, rgba(0, 0, 0, 0) 293.75px, rgba(0, 0, 0, 0) 303.75px, rgba(100, 100, 225, 0.25) 303.75px, rgba(100, 100, 225, 0.25) 327.5px, rgba(0, 0, 0, 0) 327.5px, rgba(0, 0, 0, 0) 337.5px, rgba(100, 100, 225, 0.25) 337.5px, rgba(100, 100, 225, 0.25) 361.25px, rgba(0, 0, 0, 0) 361.25px, rgba(0, 0, 0, 0) 371.25px, rgba(100, 100, 225, 0.25) 371.25px, rgba(100, 100, 225, 0.25) 395px, rgba(0, 0, 0, 0) 395px, rgba(0, 0, 0, 0) 405px, rgba(100, 100, 225, 0.25) 405px, rgba(100, 100, 225, 0.25) 428.75px, rgba(0, 0, 0, 0) 428.75px, rgba(0, 0, 0, 0) 438.75px, rgba(100, 100, 225, 0.25) 438.75px, rgba(100, 100, 225, 0.25) 462.5px, rgba(0, 0, 0, 0) 462.5px, rgba(0, 0, 0, 0) 472.5px, rgba(100, 100, 225, 0.25) 472.5px, rgba(100, 100, 225, 0.25) 496.25px, rgba(0, 0, 0, 0) 496.25px, rgba(0, 0, 0, 0) 506.25px, rgba(100, 100, 225, 0.25) 506.25px, rgba(100, 100, 225, 0.25) 530px, rgba(0, 0, 0, 0) 530px, rgba(0, 0, 0, 0) 540px, rgba(100, 100, 225, 0.25) 540px, rgba(100, 100, 225, 0.25) 563.75px, rgba(0, 0, 0, 0) 563.75px, rgba(0, 0, 0, 0) 573.75px, rgba(100, 100, 225, 0.25) 573.75px, rgba(100, 100, 225, 0.25) 597.5px, rgba(0, 0, 0, 0) 597.5px, rgba(0, 0, 0, 0) 607.5px, rgba(100, 100, 225, 0.25) 607.5px, rgba(100, 100, 225, 0.25) 631.25px, rgba(0, 0, 0, 0) 631.25px, rgba(0, 0, 0, 0) 641.25px, rgba(100, 100, 225, 0.25) 641.25px, rgba(100, 100, 225, 0.25) 665px, rgba(0, 0, 0, 0) 665px, rgba(0, 0, 0, 0) 675px, rgba(100, 100, 225, 0.25) 675px, rgba(100, 100, 225, 0.25) 698.75px, rgba(0, 0, 0, 0) 698.75px, rgba(0, 0, 0, 0) 708.75px, rgba(100, 100, 225, 0.25) 708.75px, rgba(100, 100, 225, 0.25) 732.5px, rgba(0, 0, 0, 0) 732.5px, rgba(0, 0, 0, 0) 742.5px, rgba(100, 100, 225, 0.25) 742.5px, rgba(100, 100, 225, 0.25) 766.25px, rgba(0, 0, 0, 0) 766.25px, rgba(0, 0, 0, 0) 776.25px, rgba(100, 100, 225, 0.25) 776.25px, rgba(100, 100, 225, 0.25) 800px, rgba(0, 0, 0, 0) 800px, rgba(0, 0, 0, 0) 810px);
+  background-image: -o-linear-gradient(bottom, rgba(0, 0, 0, 0.5) 5%, rgba(0, 0, 0, 0) 5%), -o-linear-gradient(left, rgba(0, 0, 0, 0) 0px, rgba(100, 100, 225, 0.25) 0px, rgba(100, 100, 225, 0.25) 23.75px, rgba(0, 0, 0, 0) 23.75px, rgba(0, 0, 0, 0) 33.75px, rgba(100, 100, 225, 0.25) 33.75px, rgba(100, 100, 225, 0.25) 57.5px, rgba(0, 0, 0, 0) 57.5px, rgba(0, 0, 0, 0) 67.5px, rgba(100, 100, 225, 0.25) 67.5px, rgba(100, 100, 225, 0.25) 91.25px, rgba(0, 0, 0, 0) 91.25px, rgba(0, 0, 0, 0) 101.25px, rgba(100, 100, 225, 0.25) 101.25px, rgba(100, 100, 225, 0.25) 125px, rgba(0, 0, 0, 0) 125px, rgba(0, 0, 0, 0) 135px, rgba(100, 100, 225, 0.25) 135px, rgba(100, 100, 225, 0.25) 158.75px, rgba(0, 0, 0, 0) 158.75px, rgba(0, 0, 0, 0) 168.75px, rgba(100, 100, 225, 0.25) 168.75px, rgba(100, 100, 225, 0.25) 192.5px, rgba(0, 0, 0, 0) 192.5px, rgba(0, 0, 0, 0) 202.5px, rgba(100, 100, 225, 0.25) 202.5px, rgba(100, 100, 225, 0.25) 226.25px, rgba(0, 0, 0, 0) 226.25px, rgba(0, 0, 0, 0) 236.25px, rgba(100, 100, 225, 0.25) 236.25px, rgba(100, 100, 225, 0.25) 260px, rgba(0, 0, 0, 0) 260px, rgba(0, 0, 0, 0) 270px, rgba(100, 100, 225, 0.25) 270px, rgba(100, 100, 225, 0.25) 293.75px, rgba(0, 0, 0, 0) 293.75px, rgba(0, 0, 0, 0) 303.75px, rgba(100, 100, 225, 0.25) 303.75px, rgba(100, 100, 225, 0.25) 327.5px, rgba(0, 0, 0, 0) 327.5px, rgba(0, 0, 0, 0) 337.5px, rgba(100, 100, 225, 0.25) 337.5px, rgba(100, 100, 225, 0.25) 361.25px, rgba(0, 0, 0, 0) 361.25px, rgba(0, 0, 0, 0) 371.25px, rgba(100, 100, 225, 0.25) 371.25px, rgba(100, 100, 225, 0.25) 395px, rgba(0, 0, 0, 0) 395px, rgba(0, 0, 0, 0) 405px, rgba(100, 100, 225, 0.25) 405px, rgba(100, 100, 225, 0.25) 428.75px, rgba(0, 0, 0, 0) 428.75px, rgba(0, 0, 0, 0) 438.75px, rgba(100, 100, 225, 0.25) 438.75px, rgba(100, 100, 225, 0.25) 462.5px, rgba(0, 0, 0, 0) 462.5px, rgba(0, 0, 0, 0) 472.5px, rgba(100, 100, 225, 0.25) 472.5px, rgba(100, 100, 225, 0.25) 496.25px, rgba(0, 0, 0, 0) 496.25px, rgba(0, 0, 0, 0) 506.25px, rgba(100, 100, 225, 0.25) 506.25px, rgba(100, 100, 225, 0.25) 530px, rgba(0, 0, 0, 0) 530px, rgba(0, 0, 0, 0) 540px, rgba(100, 100, 225, 0.25) 540px, rgba(100, 100, 225, 0.25) 563.75px, rgba(0, 0, 0, 0) 563.75px, rgba(0, 0, 0, 0) 573.75px, rgba(100, 100, 225, 0.25) 573.75px, rgba(100, 100, 225, 0.25) 597.5px, rgba(0, 0, 0, 0) 597.5px, rgba(0, 0, 0, 0) 607.5px, rgba(100, 100, 225, 0.25) 607.5px, rgba(100, 100, 225, 0.25) 631.25px, rgba(0, 0, 0, 0) 631.25px, rgba(0, 0, 0, 0) 641.25px, rgba(100, 100, 225, 0.25) 641.25px, rgba(100, 100, 225, 0.25) 665px, rgba(0, 0, 0, 0) 665px, rgba(0, 0, 0, 0) 675px, rgba(100, 100, 225, 0.25) 675px, rgba(100, 100, 225, 0.25) 698.75px, rgba(0, 0, 0, 0) 698.75px, rgba(0, 0, 0, 0) 708.75px, rgba(100, 100, 225, 0.25) 708.75px, rgba(100, 100, 225, 0.25) 732.5px, rgba(0, 0, 0, 0) 732.5px, rgba(0, 0, 0, 0) 742.5px, rgba(100, 100, 225, 0.25) 742.5px, rgba(100, 100, 225, 0.25) 766.25px, rgba(0, 0, 0, 0) 766.25px, rgba(0, 0, 0, 0) 776.25px, rgba(100, 100, 225, 0.25) 776.25px, rgba(100, 100, 225, 0.25) 800px, rgba(0, 0, 0, 0) 800px, rgba(0, 0, 0, 0) 810px);
+  background-image: linear-gradient(bottom, rgba(0, 0, 0, 0.5) 5%, rgba(0, 0, 0, 0) 5%), linear-gradient(left, rgba(0, 0, 0, 0) 0px, rgba(100, 100, 225, 0.25) 0px, rgba(100, 100, 225, 0.25) 23.75px, rgba(0, 0, 0, 0) 23.75px, rgba(0, 0, 0, 0) 33.75px, rgba(100, 100, 225, 0.25) 33.75px, rgba(100, 100, 225, 0.25) 57.5px, rgba(0, 0, 0, 0) 57.5px, rgba(0, 0, 0, 0) 67.5px, rgba(100, 100, 225, 0.25) 67.5px, rgba(100, 100, 225, 0.25) 91.25px, rgba(0, 0, 0, 0) 91.25px, rgba(0, 0, 0, 0) 101.25px, rgba(100, 100, 225, 0.25) 101.25px, rgba(100, 100, 225, 0.25) 125px, rgba(0, 0, 0, 0) 125px, rgba(0, 0, 0, 0) 135px, rgba(100, 100, 225, 0.25) 135px, rgba(100, 100, 225, 0.25) 158.75px, rgba(0, 0, 0, 0) 158.75px, rgba(0, 0, 0, 0) 168.75px, rgba(100, 100, 225, 0.25) 168.75px, rgba(100, 100, 225, 0.25) 192.5px, rgba(0, 0, 0, 0) 192.5px, rgba(0, 0, 0, 0) 202.5px, rgba(100, 100, 225, 0.25) 202.5px, rgba(100, 100, 225, 0.25) 226.25px, rgba(0, 0, 0, 0) 226.25px, rgba(0, 0, 0, 0) 236.25px, rgba(100, 100, 225, 0.25) 236.25px, rgba(100, 100, 225, 0.25) 260px, rgba(0, 0, 0, 0) 260px, rgba(0, 0, 0, 0) 270px, rgba(100, 100, 225, 0.25) 270px, rgba(100, 100, 225, 0.25) 293.75px, rgba(0, 0, 0, 0) 293.75px, rgba(0, 0, 0, 0) 303.75px, rgba(100, 100, 225, 0.25) 303.75px, rgba(100, 100, 225, 0.25) 327.5px, rgba(0, 0, 0, 0) 327.5px, rgba(0, 0, 0, 0) 337.5px, rgba(100, 100, 225, 0.25) 337.5px, rgba(100, 100, 225, 0.25) 361.25px, rgba(0, 0, 0, 0) 361.25px, rgba(0, 0, 0, 0) 371.25px, rgba(100, 100, 225, 0.25) 371.25px, rgba(100, 100, 225, 0.25) 395px, rgba(0, 0, 0, 0) 395px, rgba(0, 0, 0, 0) 405px, rgba(100, 100, 225, 0.25) 405px, rgba(100, 100, 225, 0.25) 428.75px, rgba(0, 0, 0, 0) 428.75px, rgba(0, 0, 0, 0) 438.75px, rgba(100, 100, 225, 0.25) 438.75px, rgba(100, 100, 225, 0.25) 462.5px, rgba(0, 0, 0, 0) 462.5px, rgba(0, 0, 0, 0) 472.5px, rgba(100, 100, 225, 0.25) 472.5px, rgba(100, 100, 225, 0.25) 496.25px, rgba(0, 0, 0, 0) 496.25px, rgba(0, 0, 0, 0) 506.25px, rgba(100, 100, 225, 0.25) 506.25px, rgba(100, 100, 225, 0.25) 530px, rgba(0, 0, 0, 0) 530px, rgba(0, 0, 0, 0) 540px, rgba(100, 100, 225, 0.25) 540px, rgba(100, 100, 225, 0.25) 563.75px, rgba(0, 0, 0, 0) 563.75px, rgba(0, 0, 0, 0) 573.75px, rgba(100, 100, 225, 0.25) 573.75px, rgba(100, 100, 225, 0.25) 597.5px, rgba(0, 0, 0, 0) 597.5px, rgba(0, 0, 0, 0) 607.5px, rgba(100, 100, 225, 0.25) 607.5px, rgba(100, 100, 225, 0.25) 631.25px, rgba(0, 0, 0, 0) 631.25px, rgba(0, 0, 0, 0) 641.25px, rgba(100, 100, 225, 0.25) 641.25px, rgba(100, 100, 225, 0.25) 665px, rgba(0, 0, 0, 0) 665px, rgba(0, 0, 0, 0) 675px, rgba(100, 100, 225, 0.25) 675px, rgba(100, 100, 225, 0.25) 698.75px, rgba(0, 0, 0, 0) 698.75px, rgba(0, 0, 0, 0) 708.75px, rgba(100, 100, 225, 0.25) 708.75px, rgba(100, 100, 225, 0.25) 732.5px, rgba(0, 0, 0, 0) 732.5px, rgba(0, 0, 0, 0) 742.5px, rgba(100, 100, 225, 0.25) 742.5px, rgba(100, 100, 225, 0.25) 766.25px, rgba(0, 0, 0, 0) 766.25px, rgba(0, 0, 0, 0) 776.25px, rgba(100, 100, 225, 0.25) 776.25px, rgba(100, 100, 225, 0.25) 800px, rgba(0, 0, 0, 0) 800px, rgba(0, 0, 0, 0) 810px);
+  -webkit-background-size: 100% 18px, auto;
+  -moz-background-size: 100% 18px, auto;
+  -o-background-size: 100% 18px, auto;
+  background-size: 100% 18px, auto;
+  background-position: left top;
+  line-height: 1;
 }
 
-/* line 44, ../../app/assets/stylesheets/screen.css.scss */
-footer {
-  height: 50px;
-}
-/* line 46, ../../app/assets/stylesheets/screen.css.scss */
-footer ul {
-  float: left;
-}
-/* line 49, ../../app/assets/stylesheets/screen.css.scss */
-footer li {
-  float: left;
-}
-/* line 51, ../../app/assets/stylesheets/screen.css.scss */
-footer li a {
-  float: left;
-  padding: 0.8em 1.5em;
-  text-decoration: none;
+/* line 28, ../../app/assets/stylesheets/screen.css.scss */
+aside {
+  float: right;
+  width: 200px;
 }
 
-/* line 61, ../../app/assets/stylesheets/screen.css.scss */
-section h1 {
-  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #000000), color-stop(100%, #666666));
-  background-image: -webkit-linear-gradient(#000000, #666666);
-  background-image: -moz-linear-gradient(#000000, #666666);
-  background-image: -o-linear-gradient(#000000, #666666);
-  background-image: linear-gradient(#000000, #666666);
-  -moz-border-radius-topleft: 5px;
-  -webkit-border-top-left-radius: 5px;
-  border-top-left-radius: 5px;
-  -moz-border-radius-topright: 5px;
-  -webkit-border-top-right-radius: 5px;
-  border-top-right-radius: 5px;
-  padding: 0 8px;
-  height: 25px;
-  line-height: 25px;
-  text-transform: uppercase;
-  font-size: 0.9em;
-  font-weight: bold;
-  color: #fff;
-}
-/* line 74, ../../app/assets/stylesheets/screen.css.scss */
-section div.section-content {
-  -moz-border-radius-bottomleft: 5px;
-  -webkit-border-bottom-left-radius: 5px;
-  border-bottom-left-radius: 5px;
-  -moz-border-radius-bottomright: 5px;
-  -webkit-border-bottom-right-radius: 5px;
-  border-bottom-right-radius: 5px;
-  padding: 10px;
-  background: #fff;
-  border: 1px solid #cccccc;
-}
-
-/* line 83, ../../app/assets/stylesheets/screen.css.scss */
-table.tbBusinessHours {
-  font-size: 0.85em;
-}
-/* line 85, ../../app/assets/stylesheets/screen.css.scss */
-table.tbBusinessHours th, table.tbBusinessHours td {
-  padding: 2px 2px 2px 5px;
-  border-bottom: 1px solid #cccccc;
-}
-/* line 89, ../../app/assets/stylesheets/screen.css.scss */
-table.tbBusinessHours th {
-  background: #eee;
+/* line 32, ../../app/assets/stylesheets/screen.css.scss */
+section {
+  float: right;
 }

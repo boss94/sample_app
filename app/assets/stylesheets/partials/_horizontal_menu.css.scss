@@ -1,17 +1,50 @@
 //Navigation bar - Main Menu
 
+/*
+nav#topnav {
+  @include background-image(linear-gradient($color1, $color2));
+  @include border-radius(5px);
+  display: block;
+  //height: 30px;
+  //line-height: 30px;
+  margin-bottom: 10px;
+  border: solid 1px #0b56b9;
+  overflow: hidden; 
+  ul {
+    float: left;
+  }
+  li {
+    float: left;
+    border-right: solid 1px #0b56b9;  
+    a {
+      float: left;
+      padding: .8em 1.5em;
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 0.9em;
+      &:hover{
+        @include background-image(linear-gradient($color2, $color3));
+        text-decoration: underline;
+      }
+    }
+  }
+}
+*/
+
+//with bp
 nav#topnav {
   @include background-image(linear-gradient($color1, $color2));
   @include border-radius(5px);
   display: block;
   height: 30px;
-  line-height: 1;
   margin-bottom: 10px;
   border: solid 1px #0b56b9;
   overflow: hidden; 
-  //@include column($blueprint-grid-columns,true);
+  @include column($blueprint-grid-columns);
   ul {
     float: left;
+    line-height: 1.0;
   }
   li {
     float: left;

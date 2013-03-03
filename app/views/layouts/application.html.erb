@@ -5,65 +5,16 @@
 	<%= csrf_meta_tag %>
 	<%= render 'layouts/stylesheets' %>
 </head>
-
 <body class="two-col">
-	<div id="root" class="container">
+	<div class="container">
 		<%= render 'layouts/header' %>
 		<div id="content">
 			<%= yield %>
 		</div>
 		<aside class="sidebar">
-			<section>
-				<h1>Business Hours</h1>
-				<div class="section-content">
-					<table class="tbBusinessHours">
-						<tbody><tr>
-							<th>Day</th>
-							<th>Open</th>
-							<th>Close</th>
-						</tr>
-						<tr>
-							<td>Sat</td>
-							<td>11:00 AM</td>
-							<td>7:15 PM</td>
-						</tr>
-						<tr>
-							<td>Fri</td>
-							<td>9:45 AM</td>
-							<td>7:30 PM</td>
-						</tr>
-						<tr>
-							<td>Thu</td>
-							<td>8:45 AM</td>
-							<td>5:30 PM</td>
-						</tr>
-						<tr>
-							<td>Wed</td>
-							<td>8:45 AM</td>
-							<td>1:45 PM</td>
-						</tr>
-						<tr>
-							<td>Tue</td>
-							<td>10:00 AM</td>
-							<td>6:30 PM</td>
-						</tr>
-						<tr>
-							<td>Mon</td>
-							<td>7:45 AM</td>
-							<td>3:30 PM</td>
-						</tr>
-						<tr>
-							<td>Sun</td>
-							<td colspan="2" class="closed">--- Closed ---</td>
-						</tr>
-					</tbody></table>				
-				</div>
-				</section>
-			</aside>
-			<div id="root-footer"></div>
-		</div>
-		<footer>
-			<%= render 'layouts/footer' %>
-		</footer>
-	</body>
-	</html>
+			<p>SideBar</p>
+		</aside>
+		<%= render 'layouts/footer' %>
+	</div>
+</body>
+</html>
