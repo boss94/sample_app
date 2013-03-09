@@ -1,0 +1,118 @@
+// This import applies a global reset to any page that imports this stylesheet.
+@import "compass/reset";
+//@import "blueprint/reset";
+
+// Import all the compass/blueprint modules so that we can access their mixins.
+@import "compass/css3";
+@import "compass/utilities";
+@import "compass/layout/sticky-footer";
+@import "blueprint";
+
+// Config (variables)
+@import "partials/base";
+
+// Combine the partials into a single screen stylesheet.
+@import "partials/page";
+@import "partials/form";
+@import "partials/two_col";
+@import "partials/horizontal_menu";
+
+//@include sticky-footer(50px, "#root", "#root-footer", "footer");
+
+//Style
+body {
+	text-align: center;
+	background: {
+		image: url("bg.gif"); 
+		color: $bgColor;
+		attachment: fixed;
+		repeat: repeat-x;
+	}
+	font-family: Arial,Helvetica,sans-serif;
+	font-size: 0.85em;
+	color: black;
+}
+
+.container, footer {	
+	//@include showgrid;
+	text-align: left;
+}
+
+//footer
+#root-footer {
+	clear: both;
+}
+footer {
+	padding: 10px;
+	font-size: 0.85em;
+	color:#666;
+	//height: 30px;//same as the sticky footer function used above
+	.credit {
+		float: right;
+	}
+	ul {
+		padding-top: 5px;
+		li {
+			display: inline;
+		}
+	}
+	a {
+		color: #006dc0;
+	}
+}
+
+//All sections
+section {
+	margin-bottom: 10px;
+	h1 {
+		@include background-image(linear-gradient($sTitleColor1, $sTitleColor2));
+		@include border-top-radius(5px);
+		padding: 0 8px;
+		height:25px;
+		line-height: 25px;
+		text-transform: uppercase;
+		font: {
+			size: 0.9em;
+			weight: bold;
+		}
+		color: #fff;
+	}
+	div.section-content {
+		@include border-bottom-radius(5px);
+		padding: 10px;
+		background: #fff;
+		border: 1px solid #ccc;
+	}
+}
+
+//Business Hours section
+#businessHours table {
+	font-size: 0.85em;
+	th, td {
+		padding: 2px 2px 2px 5px;
+		border-bottom: 1px solid #ccc;
+	}
+	th {
+		background: #eee;
+	}
+}
+
+//Inventory Search
+#inventory-search li {
+	padding-bottom: 10px;
+	display: block;
+	label {
+		display: block;
+		padding-bottom: 5px;
+	}
+	select {
+		width: $blueprint-container-size * 1/5;
+		padding: 3px;
+	}
+}
+
+//Inventory-List
+#inventory-list {
+	
+}
+

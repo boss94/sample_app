@@ -1,10 +1,27 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>Simple App du Tutoriel Ruby on Rails | <%= @titre %></title>
-    <%= csrf_meta_tag %>
-  </head>
-  <body>
-    <%= yield %>
-  </body>
+<head>
+	<title>CarExportsUk | <%= @titre %></title>
+	<%= csrf_meta_tag %>
+	<%= render 'layouts/stylesheets' %>
+</head>
+
+<body class="two-col">
+	<div id="root" class="container">
+		<header>
+			<%= render 'layouts/header' %>
+		</header>
+		<div id="content">
+			<%= yield %>
+		</div>
+		<aside class="sidebar">
+			<%= render 'layouts/sidebar' %>
+		</aside>
+		<div id="root-footer"><%# Sticky Footer %>
+		</div>
+	</div>
+	<footer><%# Sticky Footer %>
+		<%= render 'layouts/footer' %>
+	</footer>
+</body>
 </html>

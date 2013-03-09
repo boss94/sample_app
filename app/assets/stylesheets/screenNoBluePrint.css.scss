@@ -1,0 +1,85 @@
+@import "compass/reset";
+@import "compass/css3";
+@import "compass/utilities";
+
+$test: 20px;
+
+.border-radius-example {
+  width: 125px;
+  height: 125px;
+  background: red;
+  margin: 20px;
+  float: left;
+  padding: $test;
+}
+ 
+#border-radius {
+  @include border-radius(25px); }
+
+#three-column {
+  @include column-count(3);
+  width: 300px;
+  margin-bottom: 20px; }
+
+
+//CarExportsUK
+$bgColor: #ececec; 
+$color1: #1470bb;
+$color2: #66b4fe;
+$color3: #3ae0f0;
+body {
+	text-align: center;
+	padding: 20px 0 50px 0;
+	background: $bgColor;
+	background-attachment: fixed;
+	background-repeat: repeat-x;
+	font-family: Arial,Helvetica,sans-serif;
+	font-size: 0.85em;
+	color: black;
+}
+.container {
+	text-align: left;
+	margin: 0 auto;
+	width: 800px;
+}
+
+//Navigation bar - Main Menu
+nav#topnav {
+	@include background-image(linear-gradient($color1, $color2));
+	@include border-radius(5px);
+	display: block;
+	//height: 30px;
+	//line-height: 30px;
+	margin-bottom: 10px;
+	border: solid 1px #0b56b9;
+	overflow: hidden;	
+	ul {
+		float: left;
+	}
+	li {
+		float: left;
+		border-right: solid 1px #0b56b9;	
+		a {
+			float: left;
+			padding: .8em 1.5em;
+			color: white;
+			text-decoration: none;
+			font-weight: bold;
+			font-size: 0.9em;
+			&:hover{
+				@include background-image(linear-gradient($color2, $color3));
+				text-decoration: underline;
+			}
+		}
+	}
+}
+
+//Right column
+aside {
+	float: right;
+	width: 200px;
+}
+section {
+	float: right;
+}
+
