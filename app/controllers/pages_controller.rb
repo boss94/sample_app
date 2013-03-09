@@ -4,6 +4,10 @@ class PagesController < ApplicationController
   	@titre = "Accueil"
   end
 
+  def inventory
+  	@titre = "Inventory"
+  end
+
   def contact
   	@titre = "Contact"
   end

@@ -6,7 +6,7 @@ gem 'rails', '3.2.12'
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
 gem 'sqlite3'
-
+gem 'beautiful_scaffold', '0.2.5'
 
 # Gems used only for assets and not required
 # in production environments by default.
@@ -45,3 +45,12 @@ end
 
 # To use debugger
 # gem 'debugger'
+
+gem "will_paginate"
+gem "ransack"
+gem "prawn", "1.0.0.rc1"
+gem "RedCloth"
+gem "bb-ruby"
+gem "bluecloth"
+gem "rdiscount"
+gem "sanitize"

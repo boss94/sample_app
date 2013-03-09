@@ -1,8 +1,28 @@
 # -*- encoding : utf-8 -*-
 SampleApp::Application.routes.draw do
+  match "admin/autos/search_and_filter" => "admin/autos#index", :via => [:get, :post], :as => :admin_search_autos
+  namespace :admin do
+  resources :autos do
+    collection do
+      post :batch
+      get  :treeview
+    end
+    member do
+      post :treeview_update
+    end
+  end
+end
+
+
+  root :to => 'beautiful#dashboard'
+  match ':model_sym/select_fields' => 'beautiful#select_fields'
+
+
   get "pages/home"
 
   get "pages/contact"
+
+  get "pages/inventory"
 
   get "pages/about"
 
