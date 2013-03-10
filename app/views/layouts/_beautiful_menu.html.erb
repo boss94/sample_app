@@ -1,0 +1,7 @@
+<!-- Beautiful Scaffold Menu Do Not Touch This -->
+      <li class="<%= "active" if params[:controller] == "admin/models" %>">
+        <%= link_to t(:models, :default => "models").capitalize, admin_models_path %>
+      </li>
+      <li class="<%= "active" if params[:controller] == "admin/makes" %>">
+        <%= link_to t(:makes, :default => "makes").capitalize, admin_makes_path %>
+      </li>

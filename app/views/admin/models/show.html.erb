@@ -1,0 +1,16 @@
+<h2><%= t(:show, :default => "Show") %> <%= t(:model, :default => "model") %></h2>
+
+  <p>
+    <b><%= t(:name, :default => "Name") %>:</b>
+      <%= @model.name %>
+  </p>
+  <p>
+    <b><%= t(:make, :default => "Make") %>:</b>
+      <%= (@model.make.nil? ? "" : @model.make.caption) %>
+  </p>
+
+<!-- Beautiful_scaffold - AddField - Field - Do not remove -->
+
+<%= link_to t(:edit, :default => "Edit"), edit_admin_model_path(@model), :class => "btn" %>
+<%= link_to t(:back, :default => "Back"), admin_models_path, :class => "btn" %>
+

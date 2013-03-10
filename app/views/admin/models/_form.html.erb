@@ -1,0 +1,30 @@
+
+<%= form_for([:admin, @model ], :html => { :class => "form-horizontal" }) do |f| %>
+  <% if @model.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@model.errors.count, "error") %> prohibited this model from being saved:</h2>
+
+      <ul>
+        <% @model.errors.full_messages.each do |msg| %><li><%= msg %></li><% end %>
+      </ul>
+    </div>
+  <% end %>
+      <div class="control-group">
+      <%= f.label :name, t(:name, :default => "name").capitalize, :class => "control-label" %>
+      <div class="controls">
+        <%= f.text_field :name %>
+      </div>
+    </div>
+    <div class="control-group">
+      <%= f.label :make, t(:make, :default => "make").capitalize, :class => "control-label" %>
+      <div class="controls">
+        <%= f.collection_select :make_id, Make.all, :id, :caption, :include_blank => true %>
+      </div>
+    </div>
+<!-- Beautiful_scaffold - AddField - Do not remove -->
+  <div class="form-actions">
+    <%= f.submit :class => "btn btn-primary" %>
+  </div>
+<% end %>
+
+

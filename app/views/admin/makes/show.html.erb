@@ -1,0 +1,12 @@
+<h2><%= t(:show, :default => "Show") %> <%= t(:make, :default => "make") %></h2>
+
+  <p>
+    <b><%= t(:name, :default => "Name") %>:</b>
+      <%= @make.name %>
+  </p>
+
+<!-- Beautiful_scaffold - AddField - Field - Do not remove -->
+
+<%= link_to t(:edit, :default => "Edit"), edit_admin_make_path(@make), :class => "btn" %>
+<%= link_to t(:back, :default => "Back"), admin_makes_path, :class => "btn" %>
+
