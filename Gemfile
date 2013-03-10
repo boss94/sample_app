@@ -5,8 +5,17 @@ gem 'rails', '3.2.12'
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
-gem 'sqlite3'
 gem 'beautiful_scaffold', '0.2.5'
+
+# heroku deployment
+gem 'heroku'
+group :development, :test do
+	gem 'sqlite3'
+end
+group :production do
+	gem 'pg'
+	gem 'thin'
+end
 
 # Gems used only for assets and not required
 # in production environments by default.
@@ -18,6 +27,7 @@ group :assets do
   # gem 'therubyracer', :platforms => :ruby
 
   gem 'uglifier', '>= 1.0.3'
+  gem 'compass-rails'
 end
 
 gem 'jquery-rails'
