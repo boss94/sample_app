@@ -5,6 +5,7 @@ gem 'rails', '3.2.12'
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
+gem 'rails-i18n'
 gem 'beautiful_scaffold', '0.2.5'
 
 # heroku deployment

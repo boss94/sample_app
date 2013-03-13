@@ -19,6 +19,11 @@
 
 //@include sticky-footer(50px, "#root", "#root-footer", "footer");
 
+//General
+strong {
+	font-weight: bold;
+}
+
 //Style
 body {
 	text-align: center;
@@ -31,6 +36,15 @@ body {
 	font-family: Arial,Helvetica,sans-serif;
 	font-size: 0.85em;
 	color: black;
+}
+
+//header
+header {
+	.logo {
+		display: block;
+		height:96px;
+		background: url("logo_96.png") 0 -85px no-repeat;
+	}
 }
 
 .container, footer {	
@@ -115,4 +129,64 @@ section {
 #inventory-list {
 	
 }
+
+// TEMP : Vehicle page
+/* definition list */
+dl.multiple-table { border-bottom: 1px solid #ccc; }
+
+dl.multiple-table dt
+{
+    clear: left;
+    float: left;
+    width: 220px;
+    margin: 0;
+    padding: 5px;
+    border-top: 1px solid #ccc;
+    font-weight: bold;
+}
+
+dl.multiple-table dd
+{
+    border-top: 1px solid #ccc;
+    margin-left: 230px;
+    padding: 5px;
+}
+
+/* TEMP: inventory table */
+table.tbInventory th {
+    padding: 5px;
+    font-size: 0.9em;
+    background: #eee;
+    border: solid 1px #ccc;
+}
+
+table.tbInventory .center { text-align: center; }
+
+table.tbInventory td {
+    padding: 10px 0 10px 0;
+    vertical-align: middle;
+    border-bottom: solid 1px #ccc;
+}
+
+table.tbInventory tr:last-child td {
+    border-bottom: 0px;
+    padding-bottom: 0px;
+}
+
+table.tbInventory td img.thumbnail {
+    border: solid 1px black;
+}
+
+table.tbInventory td.pagination a {
+    font-size: 1.2em;
+    font-weight: bold;
+    text-decoration: none;
+    padding: 0 5px;
+}
+
+table.tbInventory td.pagination a.current {
+    color: black;
+}
+
+
 

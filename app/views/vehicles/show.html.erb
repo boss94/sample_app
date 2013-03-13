@@ -1,2 +1,98 @@
-<h1>Vehicles#show</h1>
-<p>Find me in app/views/vehicles/show.html.erb</p>
+<section id="inventory-list">
+	<h1><%= (@vehicle.model.nil? ? "" : @vehicle.model.caption) %>&nbsp;<%= @vehicle.additional_details %></h1>
+	<div class="section-content">
+		<article>
+			<dl class="multiple-table">
+				<dt>Year / Make / Model</dt>
+				<dd>
+					<%= @vehicle.registration_year %> / 
+					<%= (@vehicle.model.make.nil? ? "" : @vehicle.model.make.caption) %> / 
+					<%= (@vehicle.model.nil? ? "" : @vehicle.model.caption) %>
+				</dd>
+				
+				<dt>Registration</dt>
+				<dd><%= @vehicle.registration %></dd>
+
+				<dt><%= t(:price, :default => "Price") %></dt>
+				<dd><%= number_to_currency(@vehicle.price) %></dd>
+
+				<dt>Mileage</dt>
+				<dd><%= @vehicle.mileage %>
+					<%= t((@vehicle.mileage_warranty ? " (Warranted)" : "")) %>
+				</dd>
+
+				<dt>Body Type</dt>
+				<dd><%= @vehicle.body_type %></dd>
+
+				<dt>Doors</dt>
+				<dd><%= @vehicle.doors %></dd>
+
+				<dt>Fuel</dt>
+				<dd><%= @vehicle.fuel %></dd>
+
+				<dt>Color</dt>
+				<dd><%= @vehicle.color %></dd>
+
+				<dt>Equipment</dt>
+				<dd>&nbsp;<%= @vehicle.equipment %></dd>
+				<dt>Notes</dt>
+				<dd>&nbsp;<%= @vehicle.notes %></dd>
+			</dl>
+		</article>
+	</div>
+</section>
+
+
+<!-- <h1>Vehicles#show</h1>
+<p>
+	<% puts @vehicle.inspect %>
+</p>
+<p>
+	<b><%= t(:additional_details, :default => "Additional details") %>:</b>
+	<%= @vehicle.additional_details %>
+</p>
+<p>
+	<b><%= t(:registration, :default => "Registration") %>:</b>
+	<%= @vehicle.registration %>
+</p>
+<p>
+	<b><%= t(:registration_year, :default => "Registration year") %>:</b>
+	<%= @vehicle.registration_year %>
+</p>
+<p>
+	<b><%= t(:fuel, :default => "Fuel") %>:</b>
+	<%= @vehicle.fuel %>
+</p>
+<p>
+	<b><%= t(:mileage, :default => "Mileage") %>:</b>
+	<%= @vehicle.mileage %>
+</p>
+<p>
+	<b><%= t(:mileage_warranty, :default => "Mileage warranty") %>:</b>
+	<%= t((@vehicle.mileage_warranty ? "yes".to_sym : "no".to_sym)) %>
+</p>
+<p>
+	<b><%= t(:price, :default => "Price") %>:</b>
+	<%= number_to_currency(@vehicle.price) %>
+</p>
+<p>
+	<b><%= t(:color, :default => "Color") %>:</b>
+	<%= @vehicle.color %>
+</p>
+<p>
+	<b><%= t(:doors, :default => "Doors") %>:</b>
+	<%= @vehicle.doors %>
+</p>
+<p>
+	<b><%= t(:body_type, :default => "Body type") %>:</b>
+	<%= @vehicle.body_type %>
+</p>
+<p>
+	<b><%= t(:equipment, :default => "Equipment") %>:</b>
+	<%= @vehicle.equipment %>
+</p>
+<p>
+	<b><%= t(:notes, :default => "Notes") %>:</b>
+	<%= @vehicle.notes %>
+</p>
+ -->

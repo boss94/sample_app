@@ -1,6 +1,34 @@
 # -*- encoding : utf-8 -*-
 SampleApp::Application.routes.draw do
 
+  match "admin/pages/search_and_filter" => "admin/pages#index", :via => [:get, :post], :as => :admin_search_pages
+  namespace :admin do
+  resources :pages do
+    collection do
+      post :batch
+      get  :treeview
+    end
+    member do
+      post :treeview_update
+    end
+  end
+end
+
+
+  match "admin/vehicles/search_and_filter" => "admin/vehicles#index", :via => [:get, :post], :as => :admin_search_vehicles
+  namespace :admin do
+  resources :vehicles do
+    collection do
+      post :batch
+      get  :treeview
+    end
+    member do
+      post :treeview_update
+    end
+  end
+end
+
+
   match "admin/models/search_and_filter" => "admin/models#index", :via => [:get, :post], :as => :admin_search_models
   namespace :admin do
   resources :models do
@@ -29,10 +57,12 @@ end
 end
 
 
-  root :to => 'beautiful#dashboard'
+  root :to => 'vehicles#index'
   match ':model_sym/select_fields' => 'beautiful#select_fields'
+  match 'admin' => 'beautiful#dashboard'
+  match 'backoffice' => 'beautiful#dashboard'
 
-
+  resources :vehicles
   match 'vehicles/inventory' => 'vehicles#index'
   get "vehicles/index"
 

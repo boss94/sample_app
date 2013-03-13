@@ -1,0 +1,60 @@
+<h2><%= t(:show, :default => "Show") %> <%= t(:vehicle, :default => "vehicle") %></h2>
+
+  <p>
+    <b><%= t(:model, :default => "Model") %>:</b>
+      <%= (@vehicle.model.nil? ? "" : @vehicle.model.caption) %>
+  </p>
+  <p>
+    <b><%= t(:additional_details, :default => "Additional details") %>:</b>
+      <%= @vehicle.additional_details %>
+  </p>
+  <p>
+    <b><%= t(:registration, :default => "Registration") %>:</b>
+      <%= @vehicle.registration %>
+  </p>
+  <p>
+    <b><%= t(:registration_year, :default => "Registration year") %>:</b>
+      <%= @vehicle.registration_year %>
+  </p>
+  <p>
+    <b><%= t(:fuel, :default => "Fuel") %>:</b>
+      <%= @vehicle.fuel %>
+  </p>
+  <p>
+    <b><%= t(:mileage, :default => "Mileage") %>:</b>
+      <%= @vehicle.mileage %>
+  </p>
+  <p>
+    <b><%= t(:mileage_warranty, :default => "Mileage warranty") %>:</b>
+      <%= t((@vehicle.mileage_warranty ? "yes".to_sym : "no".to_sym)) %>
+  </p>
+  <p>
+    <b><%= t(:price, :default => "Price") %>:</b>
+      <%= number_to_currency(@vehicle.price) %>
+  </p>
+  <p>
+    <b><%= t(:color, :default => "Color") %>:</b>
+      <%= @vehicle.color %>
+  </p>
+  <p>
+    <b><%= t(:doors, :default => "Doors") %>:</b>
+      <%= @vehicle.doors %>
+  </p>
+  <p>
+    <b><%= t(:body_type, :default => "Body type") %>:</b>
+      <%= @vehicle.body_type %>
+  </p>
+  <p>
+    <b><%= t(:equipment, :default => "Equipment") %>:</b>
+      <%= @vehicle.equipment %>
+  </p>
+  <p>
+    <b><%= t(:notes, :default => "Notes") %>:</b>
+      <%= @vehicle.notes %>
+  </p>
+
+<!-- Beautiful_scaffold - AddField - Field - Do not remove -->
+
+<%= link_to t(:edit, :default => "Edit"), edit_admin_vehicle_path(@vehicle), :class => "btn" %>
+<%= link_to t(:back, :default => "Back"), admin_vehicles_path, :class => "btn" %>
+

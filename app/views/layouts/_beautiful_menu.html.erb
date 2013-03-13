@@ -1,4 +1,10 @@
 <!-- Beautiful Scaffold Menu Do Not Touch This -->
+      <li class="<%= "active" if params[:controller] == "admin/pages" %>">
+        <%= link_to t(:pages, :default => "pages").capitalize, admin_pages_path %>
+      </li>
+      <li class="<%= "active" if params[:controller] == "admin/vehicles" %>">
+        <%= link_to t(:vehicles, :default => "vehicles").capitalize, admin_vehicles_path %>
+      </li>
       <li class="<%= "active" if params[:controller] == "admin/models" %>">
         <%= link_to t(:models, :default => "models").capitalize, admin_models_path %>
       </li>

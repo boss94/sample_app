@@ -1,12 +1,11 @@
-class Model < ActiveRecord::Base
-  has_many :vehicles, :dependent => :nullify
+class Page < ActiveRecord::Base
   include BeautifulScaffoldModule      
 
   before_save :fulltext_field_processing
 
   def fulltext_field_processing
     # You can preparse with own things here
-    generate_fulltext_field([])
+    generate_fulltext_field(["content"])
   end
   scope :sorting, lambda{ |options|
     attribute = options[:attribute]
@@ -21,6 +20,5 @@ class Model < ActiveRecord::Base
   def caption
     (self["name"] || self["label"] || self["description"] || "##{id}")
   end
-  belongs_to :make
-  attr_accessible :vehicle_ids, :make_id, :name
+  attr_accessible :content, :content_fulltext, :content_typetext, :title
 end

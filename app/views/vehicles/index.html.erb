@@ -1,8 +1,49 @@
 <section id="inventory-list">
-	<h1>Inventory</h1>
+	<h1>Stock</h1>
 	<div class="section-content">
 		<article>
-			
+			<table cellspacing="0" cellpadding="0" class="tbInventory">
+				<thead>
+					<tr>
+						<th>Picture</th>
+						<th>Sort By: 
+							<a href="/vehicles/?sort=make&amp;dir=asc">Make</a> -
+							<a href="/vehicles/?sort=model&amp;dir=asc">Model</a> -
+							<a href="/vehicles/?sort=year&amp;dir=asc">Year</a>
+						</th>
+						<th class="center"><a href="/vehicles/?sort=mileage&amp;dir=asc">Mileage</a></th>
+						<th class="center"><a href="/vehicles/?sort=price&amp;dir=desc">Price</a></th>
+						<th>&nbsp;</th>
+					</tr>
+				</thead>
+				<tbody>
+					<% @vehicles.each do |vehicle| %>
+					<tr>
+						<td>
+							<div style="width: 100px; height: 75px; background: #eee; color: #999; text-align: center; line-height: 75px;">No Picture</div>
+						</td>
+						<td>
+							<strong>
+								<%= vehicle.registration_year %>
+								<%= (vehicle.model.nil? ? "" : vehicle.model.caption) %>
+							</strong>
+							<p>
+								<%=vehicle.color %><%= ", " if vehicle.doors %> 
+								<%= vehicle.doors + "door" %><%= ", " if vehicle.body_type %>
+								<%= vehicle.try(:body_type) %><br />
+								<%= vehicle.additional_details %>
+							</p>
+						</td>
+						<td class="center">
+							<%= vehicle.mileage %>
+							<% #= t((vehicle.mileage_warranty ? " <br />(Warranted)" : "")) %>
+						</td>
+						<td class="center">xxx</td>
+						<td class="center"><a href="/vehicles/<%= vehicle.id %>">View Details</a></td>
+					</tr>
+					<% end %>
+				</tbody>
+			</table>
 		</article>
 	</div>
 </section>
