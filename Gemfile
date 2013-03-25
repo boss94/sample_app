@@ -10,10 +10,10 @@ gem 'beautiful_scaffold', '0.2.5'
 
 # heroku deployment
 gem 'heroku'
-group :development, :test do
+group :test do
 	gem 'sqlite3'
 end
-group :production do
+group :development, :production do
 	gem 'pg'
 	gem 'thin'
 end
