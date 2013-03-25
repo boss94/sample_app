@@ -8,6 +8,7 @@ gem 'rails', '3.2.12'
 gem 'rails-i18n'
 gem 'beautiful_scaffold', '0.2.5'
 gem 'devise'
+gem 'cancan'
 
 # heroku deployment
 gem 'heroku'
@@ -64,5 +65,5 @@ gem "prawn", "1.0.0.rc1"
 gem "RedCloth"
 gem "bb-ruby"
 gem "bluecloth"
-#gem "rdiscount"
+gem "rdiscount"
 gem "sanitize"

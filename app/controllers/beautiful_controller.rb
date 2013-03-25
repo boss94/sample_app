@@ -1,5 +1,6 @@
 # encoding : utf-8
 class BeautifulController < ApplicationController
+  # before_filter :authenticate_user!
   
   layout "beautiful_layout"
 

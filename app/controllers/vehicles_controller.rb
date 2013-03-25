@@ -1,6 +1,6 @@
 class VehiclesController < ApplicationController
-
-	before_filter :load_vehicle, :only => [:show, :edit, :update, :destroy]
+	load_and_authorize_resource
+	# before_filter :load_vehicle, :only => [:show, :edit, :update, :destroy]
 
 	def index
 		@titre = "Inventory"

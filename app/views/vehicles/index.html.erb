@@ -38,7 +38,13 @@
 							<%= vehicle.mileage %>
 							<% #= t((vehicle.mileage_warranty ? " <br />(Warranted)" : "")) %>
 						</td>
-						<td class="center">xxx</td>
+						<td class="center">
+							<% if can? :update, vehicle %>
+								<%= number_to_currency(vehicle.price) %>
+							<% else %>
+								XXXX
+							<% end -%>
+						</td>
 						<td class="center"><a href="/vehicles/<%= vehicle.id %>">View Details</a></td>
 					</tr>
 					<% end %>
