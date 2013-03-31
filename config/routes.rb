@@ -57,10 +57,12 @@ end
 end
 
 
-  root :to => 'vehicles#index'
+  root :to => 'pages#home'
   match ':model_sym/select_fields' => 'beautiful#select_fields'
   match 'admin' => 'beautiful#dashboard'
   match 'backoffice' => 'beautiful#dashboard'
+  match 'about' => 'pages#about'
+  match 'contact' => 'pages#contact'
 
   resources :vehicles
   match 'vehicles/inventory' => 'vehicles#index'
