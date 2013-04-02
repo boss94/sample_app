@@ -3,6 +3,9 @@
 
 en:
   hello: "Hello world"
+  pages:
+    about_us: "About Us"
+    contact_us: "Contact Us"
   date:
     abbr_day_names:
     - Sun

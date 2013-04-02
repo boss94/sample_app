@@ -25,6 +25,7 @@
 						<td>
 							<strong>
 								<%= vehicle.registration_year %>
+								<%= (vehicle.model.make.nil? ? "" : vehicle.model.make.caption) %> 
 								<%= (vehicle.model.nil? ? "" : vehicle.model.caption) %>
 							</strong>
 							<p>

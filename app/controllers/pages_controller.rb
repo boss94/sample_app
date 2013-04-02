@@ -16,6 +16,7 @@ class PagesController < ApplicationController
   end
 
   def about
-  	@titre = "À Propos"
+    @titre = t("pages.about_us")
+#  	@titre = t (:about_us), :scope => [:pages]
   end
 end
