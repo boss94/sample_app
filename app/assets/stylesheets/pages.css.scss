@@ -1,3 +1,22 @@
 // Place all the styles related to the Pages controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+.page{ 
+	article{
+		padding-bottom: 20px;
+	}
+	h2 {
+		padding: 20px 0px 10px 0px;
+		color: #069BD5;
+		font:{
+			style:italic;
+		}
+	}
+	ul{
+		list-style-type: disc;
+		display: list-item;
+		li {
+			margin-left: 30px;
+		}
+	}
+}

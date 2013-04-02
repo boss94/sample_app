@@ -1,0 +1,19 @@
+/* line 5, ../../app/assets/stylesheets/pages.css.scss */
+.page article {
+  padding-bottom: 20px;
+}
+/* line 8, ../../app/assets/stylesheets/pages.css.scss */
+.page h2 {
+  padding: 20px 0px 10px 0px;
+  color: #069BD5;
+  font-style: italic;
+}
+/* line 15, ../../app/assets/stylesheets/pages.css.scss */
+.page ul {
+  list-style-type: disc;
+  display: list-item;
+}
+/* line 18, ../../app/assets/stylesheets/pages.css.scss */
+.page ul li {
+  margin-left: 30px;
+}

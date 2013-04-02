@@ -2,3 +2,74 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+$left-column: floor($content-columns * 0.9/3);// QickFix to border and padding on csection-container
+$right-column: ceil($content-columns * 1.9/3);   
+
+div#car-description {
+	@include column($left-column);
+}div#car-image {
+	clear: left;
+	@include column($right-column, true);
+}
+
+// TEMP : Vehicle page
+/* definition list */
+dl.multiple-table { 
+	border-bottom: 1px solid #ccc; 
+	width: 300px;
+}
+
+dl.multiple-table dt
+{
+	clear: left;
+	float: left;
+	width: 140px;
+	margin: 0;
+	padding: 5px;
+	border-top: 1px solid #ccc;
+	font-weight: bold;
+}
+
+dl.multiple-table dd
+{
+	border-top: 1px solid #ccc;
+	margin-left: 150px;
+	padding: 5px;
+}
+
+/* TEMP: inventory table */
+table.tbInventory th {
+	padding: 5px;
+	font-size: 0.9em;
+	background: #eee;
+	border: solid 1px #ccc;
+}
+
+table.tbInventory .center { text-align: center; }
+
+table.tbInventory td {
+	padding: 10px 0 10px 0;
+	vertical-align: middle;
+	border-bottom: solid 1px #ccc;
+}
+
+table.tbInventory tr:last-child td {
+	border-bottom: 0px;
+	padding-bottom: 0px;
+}
+
+table.tbInventory td img.thumbnail {
+	border: solid 1px black;
+}
+
+table.tbInventory td.pagination a {
+	font-size: 1.2em;
+	font-weight: bold;
+	text-decoration: none;
+	padding: 0 5px;
+}
+
+table.tbInventory td.pagination a.current {
+	color: black;
+}
+

@@ -1,0 +1,32 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the top of the
+ * compiled file, but it's generally better to create a new file per style scope.
+ *
+ *= require_self
+ *= require_tree .
+ */
+ // This import applies a global reset to any page that imports this stylesheet.
+@import "compass/reset";
+//@import "blueprint/reset";
+
+// Import all the compass/blueprint modules so that we can access their mixins.
+@import "compass/css3";
+@import "compass/utilities";
+@import "compass/layout/sticky-footer";
+@import "blueprint";
+
+// Config (variables)
+@import "partials/base";
+
+// Combine the partials into a single screen stylesheet.
+@import "partials/page";
+@import "partials/form";
+@import "partials/two_col";
+@import "partials/horizontal_menu";
+

@@ -1,27 +1,18 @@
-// This import applies a global reset to any page that imports this stylesheet.
-@import "compass/reset";
-//@import "blueprint/reset";
-
-// Import all the compass/blueprint modules so that we can access their mixins.
-@import "compass/css3";
-@import "compass/utilities";
-@import "compass/layout/sticky-footer";
-@import "blueprint";
-
-// Config (variables)
-@import "partials/base";
-
-// Combine the partials into a single screen stylesheet.
-@import "partials/page";
-@import "partials/form";
-@import "partials/two_col";
-@import "partials/horizontal_menu";
+@import "application";
+@import "vehicles";
+@import "pages";
 
 //@include sticky-footer(50px, "#root", "#root-footer", "footer");
 
 //General
 strong {
 	font-weight: bold;
+}
+.clear{
+	clear: both;
+	height: 0px;
+	line-height: 0px;
+	font-size: 0px;
 }
 
 //Style
@@ -128,64 +119,6 @@ section {
 //Inventory-List
 #inventory-list {
 	
-}
-
-// TEMP : Vehicle page
-/* definition list */
-dl.multiple-table { border-bottom: 1px solid #ccc; }
-
-dl.multiple-table dt
-{
-    clear: left;
-    float: left;
-    width: 220px;
-    margin: 0;
-    padding: 5px;
-    border-top: 1px solid #ccc;
-    font-weight: bold;
-}
-
-dl.multiple-table dd
-{
-    border-top: 1px solid #ccc;
-    margin-left: 230px;
-    padding: 5px;
-}
-
-/* TEMP: inventory table */
-table.tbInventory th {
-    padding: 5px;
-    font-size: 0.9em;
-    background: #eee;
-    border: solid 1px #ccc;
-}
-
-table.tbInventory .center { text-align: center; }
-
-table.tbInventory td {
-    padding: 10px 0 10px 0;
-    vertical-align: middle;
-    border-bottom: solid 1px #ccc;
-}
-
-table.tbInventory tr:last-child td {
-    border-bottom: 0px;
-    padding-bottom: 0px;
-}
-
-table.tbInventory td img.thumbnail {
-    border: solid 1px black;
-}
-
-table.tbInventory td.pagination a {
-    font-size: 1.2em;
-    font-weight: bold;
-    text-decoration: none;
-    padding: 0 5px;
-}
-
-table.tbInventory td.pagination a.current {
-    color: black;
 }
 
 
