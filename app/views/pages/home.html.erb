@@ -1,8 +1,16 @@
-<section id="inventory-list">
+<section>
 	<h1>Welcome to Car Exports UK</h1>
 	<div class="section-content">
 		<article>
-			<%= @homepage.content %>
+			<div style="float: right; width: 250px;">
+				<a href="http://maps.google.co.uk/maps?hl=en&amp;q=nn57qs&amp;ie=UTF8&amp;hq=&amp;hnear=Northampton+NN5+7QS,+United+Kingdom&amp;gl=uk&amp;t=m&amp;ll=52.252502,-0.918131&amp;spn=0.010509,0.01708&amp;z=14&amp;iwloc=A&amp;source=embed" style="color:#0000FF;text-align:left">
+					<%#= image_tag('http://maps.googleapis.com/maps/api/staticmap?center=nn5+7qs&size=250x250&maptype=roadmap\&markers=color:red%7Cnn5+7qs,uk&sensor=false') %>
+					<%= image_tag('mapCEUK.png') %>
+					View Larger Map
+				</a>
+			</div>
+			<p><%= raw(@homepage.content) %></p>
+			<div class="clear">&nbsp;</div>
 		</article>
 	</div>
 </section>
