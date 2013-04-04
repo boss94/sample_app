@@ -1,6 +1,8 @@
 // Place all the styles related to the vehicles controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+@import "application";
+@import "partials/two_col";
 
 $left-column: floor($content-columns * 0.9/3);// QickFix to border and padding on csection-container
 $right-column: ceil($content-columns * 1.9/3);   

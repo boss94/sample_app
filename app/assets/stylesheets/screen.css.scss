@@ -2,6 +2,12 @@
 @import "vehicles";
 @import "pages";
 
+// Combine the partials into a single screen stylesheet.
+@import "partials/page";
+@import "partials/form";
+@import "partials/two_col";
+@import "partials/horizontal_menu";
+
 //@include sticky-footer(50px, "#root", "#root-footer", "footer");
 
 //General

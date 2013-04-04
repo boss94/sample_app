@@ -1,4 +1,5 @@
 //Navigation bar - Main Menu
+@import "application";
 
 nav#topnav {
   @include background-image(linear-gradient($color1, $color2));
