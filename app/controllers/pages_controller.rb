@@ -12,7 +12,7 @@ class PagesController < ApplicationController
   end
 
   def contact
-  	@titre = "Contact"
+    @titre = t("pages.contact_us")
   end
 
   def about
