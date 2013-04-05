@@ -3,6 +3,7 @@
 
 en:
   hello: "Hello world"
+  pages_label: "pages"
   pages:
     about_us: "About Us"
     contact_us: "Contact Us"
