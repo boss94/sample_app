@@ -401,16 +401,17 @@ table.tbInventory td.pagination a.current {
 }
 /* line 8, ../../app/assets/stylesheets/pages.css.scss */
 .page h2 {
-  padding: 20px 0px 10px 0px;
+  padding: 20px 0px 5px 0px;
   color: #069BD5;
   font-style: italic;
+  font-size: larger;
 }
-/* line 15, ../../app/assets/stylesheets/pages.css.scss */
+/* line 16, ../../app/assets/stylesheets/pages.css.scss */
 .page ul {
   list-style-type: disc;
   display: list-item;
 }
-/* line 18, ../../app/assets/stylesheets/pages.css.scss */
+/* line 19, ../../app/assets/stylesheets/pages.css.scss */
 .page ul li {
   margin-left: 30px;
 }
@@ -678,7 +679,7 @@ nav#topnav li a:hover {
 }
 
 /* line 14, ../../app/assets/stylesheets/screen.css.scss */
-strong {
+strong, .strong {
   font-weight: bold;
 }
 
