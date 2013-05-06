@@ -1,13 +1,16 @@
 <section id="inventory-list">
-	<h1><%= (@vehicle.model.nil? ? "" : @vehicle.model.caption) %>&nbsp;<%= @vehicle.additional_details %></h1>
+	<h1><%= (@vehicle.model.make.nil? ? "" : @vehicle.model.make.caption) %>
+		<%= (@vehicle.model.nil? ? "" : @vehicle.model.caption) %>&nbsp;<%= @vehicle.additional_details %>
+	</h1>
 	<div class="section-content">
-		<article>
-			<dl class="multiple-table">
+		<article class="vehicle-detail">
+			<dl  style="float:right;width:244px;" class="multiple-table">
 				<dt>Year / Make / Model</dt>
 				<dd>
 					<%= @vehicle.registration_year %> / 
 					<%= (@vehicle.model.make.nil? ? "" : @vehicle.model.make.caption) %> / 
 					<%= (@vehicle.model.nil? ? "" : @vehicle.model.caption) %>
+
 				</dd>
 				
 				<dt>Registration</dt>
@@ -38,6 +41,21 @@
 				<dt>Notes</dt>
 				<dd>&nbsp;<%= @vehicle.notes %></dd>
 			</dl>
+	<!-- Place somewhere in the <body> of your page -->
+	<div class="flexslider">
+	  <ul class="slides">
+	    <li>
+	      <img src="http://res.cloudinary.com/anysites/image/upload/v1364749763/RO59AGZFR_te5xvz.jpg" />
+	    </li>
+	    <li>
+	      <img src="http://res.cloudinary.com/anysites/image/upload/v1364749766/RO59AGZINT1_r3xygs.jpg" />
+	    </li>
+	    <li>
+	      <img src="http://res.cloudinary.com/anysites/image/upload/v1364749769/RO59AGZBK_t2iu0x.jpg" />
+	    </li>
+	  </ul>
+	</div>
+
 		</article>
 	</div>
 </section>

@@ -4,6 +4,14 @@
 	<title>CarExportsUk | <%= @titre %></title>
 	<%= csrf_meta_tag %>
 	<%= render 'layouts/stylesheets' %>
+	<%= javascript_include_tag "application" %>
+	<!-- Place in the <head>, after the three links -->
+<!-- Place in the <head>, after the three links -->
+<script type="text/javascript" charset="utf-8">
+  $(window).load(function() {
+    $('.flexslider').flexslider();
+  });
+</script>
 </head>
 
 <body class="two-col">
