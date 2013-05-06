@@ -33,6 +33,7 @@ group :assets do
 end
 
 gem 'jquery-rails'
+gem "flexslider", "~> 2.0.2"
 
 group :development do
   gem 'rspec-rails'

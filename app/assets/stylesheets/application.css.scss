@@ -10,7 +10,9 @@
  *
  *= require_self
  *= require_tree .
+ *= require flexslider.css
  */
+
  // This import applies a global reset to any page that imports this stylesheet.
 @import "compass/reset";
 //@import "blueprint/reset";
@@ -25,4 +27,10 @@
 @import "partials/base";
 
 
+article.vehicle-detail{
+	min-height: 400px;
+}
 
+.flexslider {
+	width: 300px;
+}
