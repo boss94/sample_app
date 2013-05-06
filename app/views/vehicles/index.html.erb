@@ -18,10 +18,19 @@
 				</thead>
 				<tbody>
 					<% @vehicles.each do |vehicle| %>
+						<% 
+							@front_url = nil				
+							vehicle.images.each do |image|	
+								@front_url = image.url if (image.view = 'front')
+							end
+						%>
 					<tr>
 						<td>
-							<!-- <div style="width: 100px; height: 75px; background: #eee; color: #999; text-align: center; line-height: 75px;">No Picture</div> -->
-							<div style="width: 100px; height: 75px; background: #eee; color: #999; text-align: center; line-height: 75px;background: url('http://res.cloudinary.com/anysites/image/upload/c_scale,w_100/v1364749763/RO59AGZFR_te5xvz.jpg');">&nbsp;</div>
+							<% if @front_url %>
+								<div style="width: 100px; height: 75px; background: #eee; color: #999; text-align: center; line-height: 75px;background: url('<%=@front_url%>');">&nbsp;</div>
+							<% else %>
+								<div style="width: 100px; height: 75px; background: #eee; color: #999; text-align: center; line-height: 75px;">No Picture</div>
+							<% end %>
 						</td>
 						<td>
 							<strong>

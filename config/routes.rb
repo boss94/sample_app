@@ -1,6 +1,9 @@
 # -*- encoding : utf-8 -*-
 SampleApp::Application.routes.draw do
 
+  resources :images
+
+
   match "admin/pages/search_and_filter" => "admin/pages#index", :via => [:get, :post], :as => :admin_search_pages
   namespace :admin do
   resources :pages do

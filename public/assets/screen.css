@@ -10,6 +10,7 @@
  *
  *= require_self
  *= require_tree .
+ *= require flexslider.css
  */
 /* line 17, ../../../../.rvm/gems/ruby-1.9.3-p385/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 html, body, div, span, applet, object, iframe,
@@ -83,6 +84,16 @@ table {
 /* line 25, ../../app/assets/stylesheets/partials/_base.css.scss */
 table th {
   font-weight: bold;
+}
+
+/* line 30, ../../app/assets/stylesheets/application.css.scss */
+article.vehicle-detail {
+  min-height: 400px;
+}
+
+/* line 34, ../../app/assets/stylesheets/application.css.scss */
+.flexslider {
+  width: 300px;
 }
 
 /*
@@ -97,6 +108,7 @@ table th {
  *
  *= require_self
  *= require_tree .
+ *= require flexslider.css
  */
 /* line 17, ../../../../.rvm/gems/ruby-1.9.3-p385/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 html, body, div, span, applet, object, iframe,
@@ -170,6 +182,16 @@ table {
 /* line 25, ../../app/assets/stylesheets/partials/_base.css.scss */
 table th {
   font-weight: bold;
+}
+
+/* line 30, ../../app/assets/stylesheets/application.css.scss */
+article.vehicle-detail {
+  min-height: 400px;
+}
+
+/* line 34, ../../app/assets/stylesheets/application.css.scss */
+.flexslider {
+  width: 300px;
 }
 
 /*
@@ -184,6 +206,7 @@ table th {
  *
  *= require_self
  *= require_tree .
+ *= require flexslider.css
  */
 /* line 17, ../../../../.rvm/gems/ruby-1.9.3-p385/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 html, body, div, span, applet, object, iframe,
@@ -257,6 +280,16 @@ table {
 /* line 25, ../../app/assets/stylesheets/partials/_base.css.scss */
 table th {
   font-weight: bold;
+}
+
+/* line 30, ../../app/assets/stylesheets/application.css.scss */
+article.vehicle-detail {
+  min-height: 400px;
+}
+
+/* line 34, ../../app/assets/stylesheets/application.css.scss */
+.flexslider {
+  width: 300px;
 }
 
 /* line 33, ../../app/assets/stylesheets/partials/_two_col.css.scss */
@@ -428,6 +461,7 @@ table.tbInventory td.pagination a.current {
  *
  *= require_self
  *= require_tree .
+ *= require flexslider.css
  */
 /* line 17, ../../../../.rvm/gems/ruby-1.9.3-p385/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 html, body, div, span, applet, object, iframe,
@@ -501,6 +535,16 @@ table {
 /* line 25, ../../app/assets/stylesheets/partials/_base.css.scss */
 table th {
   font-weight: bold;
+}
+
+/* line 30, ../../app/assets/stylesheets/application.css.scss */
+article.vehicle-detail {
+  min-height: 400px;
+}
+
+/* line 34, ../../app/assets/stylesheets/application.css.scss */
+.flexslider {
+  width: 300px;
 }
 
 /* line 33, ../../app/assets/stylesheets/partials/_two_col.css.scss */
@@ -556,6 +600,7 @@ body.two-col #content {
  *
  *= require_self
  *= require_tree .
+ *= require flexslider.css
  */
 /* line 17, ../../../../.rvm/gems/ruby-1.9.3-p385/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 html, body, div, span, applet, object, iframe,
@@ -629,6 +674,16 @@ table {
 /* line 25, ../../app/assets/stylesheets/partials/_base.css.scss */
 table th {
   font-weight: bold;
+}
+
+/* line 30, ../../app/assets/stylesheets/application.css.scss */
+article.vehicle-detail {
+  min-height: 400px;
+}
+
+/* line 34, ../../app/assets/stylesheets/application.css.scss */
+.flexslider {
+  width: 300px;
 }
 
 /* line 4, ../../app/assets/stylesheets/partials/_horizontal_menu.css.scss */

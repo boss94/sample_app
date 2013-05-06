@@ -10,18 +10,17 @@
 					<%= @vehicle.registration_year %> / 
 					<%= (@vehicle.model.make.nil? ? "" : @vehicle.model.make.caption) %> / 
 					<%= (@vehicle.model.nil? ? "" : @vehicle.model.caption) %>
-
 				</dd>
 				
 				<dt>Registration</dt>
 				<dd><%= @vehicle.registration %></dd>
 
 				<dt><%= t(:price, :default => "Price") %></dt>
-				<dd><%= number_to_currency(@vehicle.price) %></dd>
+				<dd><%= @vehicle.price ? number_to_currency(@vehicle.price) : link_to('Log in', vehicles_path) %></dd>
 
 				<dt>Mileage</dt>
 				<dd><%= @vehicle.mileage %>
-					<%= t((@vehicle.mileage_warranty ? " (Warranted)" : "")) %>
+					<%= @vehicle.mileage_warranty ? " (Warranted)" : "" %>
 				</dd>
 
 				<dt>Body Type</dt>
@@ -44,15 +43,11 @@
 	<!-- Place somewhere in the <body> of your page -->
 	<div class="flexslider">
 	  <ul class="slides">
-	    <li>
-	      <img src="http://res.cloudinary.com/anysites/image/upload/v1364749763/RO59AGZFR_te5xvz.jpg" />
-	    </li>
-	    <li>
-	      <img src="http://res.cloudinary.com/anysites/image/upload/v1364749766/RO59AGZINT1_r3xygs.jpg" />
-	    </li>
-	    <li>
-	      <img src="http://res.cloudinary.com/anysites/image/upload/v1364749769/RO59AGZBK_t2iu0x.jpg" />
-	    </li>
+		<% @vehicle.images.each do |image| %>					
+		    <li>
+		      <img src="<%= image.url %>" />
+		    </li>
+		<% end %>
 	  </ul>
 	</div>
 

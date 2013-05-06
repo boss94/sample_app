@@ -1,6 +1,6 @@
 class Vehicle < ActiveRecord::Base
   include BeautifulScaffoldModule      
-
+  has_many :images
   before_save :fulltext_field_processing
   validates :model, :color, :presence => true
 
