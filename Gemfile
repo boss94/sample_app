@@ -59,6 +59,9 @@ end
 # To use debugger
 # gem 'debugger'
 
+gem 'carrierwave'
+gem 'cloudinary'
+
 gem "will_paginate"
 gem "ransack"
 gem "prawn", "1.0.0.rc1"
