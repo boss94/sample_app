@@ -97,6 +97,7 @@ class Admin::VehiclesController < BeautifulController
   end
 
   def create
+    debugger
     @vehicle = Vehicle.create(params[:vehicle])
 
     respond_to do |format|

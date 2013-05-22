@@ -21,6 +21,10 @@ class Vehicle < ActiveRecord::Base
   def caption
     (self["name"] || self["label"] || self["description"] || "##{id}")
   end
+  def make_id
+    #debugger
+    (model) ? model.make_id : ''
+  end
   belongs_to :model
   attr_accessible :model_id, :additional_details, :body_type, :color, :doors, :equipment, :equipment_fulltext, :equipment_typetext, :fuel, :mileage, :mileage_warranty, :notes, :notes_fulltext, :notes_typetext, :price, :registration, :registration_year
 end

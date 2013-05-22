@@ -27,7 +27,8 @@
 					<tr>
 						<td>
 							<% if @front_url %>
-								<div style="width: 100px; height: 75px; background: #eee; color: #999; text-align: center; line-height: 75px;background: url('<%=@front_url%>');">&nbsp;</div>
+								<%#= image_tag("http://res.cloudinary.com/anysites/image/upload/w_100,h_75,a_-10/RO59AGZFR_te5xvz.jpg") %>
+								<%= image_tag(@front_url, :width => 100, :height => 75) %>
 							<% else %>
 								<div style="width: 100px; height: 75px; background: #eee; color: #999; text-align: center; line-height: 75px;">No Picture</div>
 							<% end %>

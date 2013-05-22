@@ -1,0 +1,19 @@
+---
+development:
+  cloud_name: anysites
+  api_key: '135248735234699'
+  api_secret: urJk-Iuek5V_F5H9wOnpIzA63EI
+  enhance_image_tag: true
+  static_image_support: false
+production:
+  cloud_name: anysites
+  api_key: '135248735234699'
+  api_secret: urJk-Iuek5V_F5H9wOnpIzA63EI
+  enhance_image_tag: true
+  static_image_support: true
+test:
+  cloud_name: anysites
+  api_key: '135248735234699'
+  api_secret: urJk-Iuek5V_F5H9wOnpIzA63EI
+  enhance_image_tag: true
+  static_image_support: false

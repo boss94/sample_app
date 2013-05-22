@@ -9,16 +9,16 @@
       </ul>
     </div>
   <% end %>
-      <div class="control-group">
-      <%= f.label :name, t(:name, :default => "name").capitalize, :class => "control-label" %>
-      <div class="controls">
-        <%= f.text_field :name %>
-      </div>
-    </div>
     <div class="control-group">
       <%= f.label :make, t(:make, :default => "make").capitalize, :class => "control-label" %>
       <div class="controls">
         <%= f.collection_select :make_id, Make.all, :id, :caption, :include_blank => true %>
+      </div>
+    </div>
+    <div class="control-group">
+      <%= f.label :name, t(:name, :default => "model").capitalize, :class => "control-label" %>
+      <div class="controls">
+        <%= f.text_field :name %>
       </div>
     </div>
 <!-- Beautiful_scaffold - AddField - Do not remove -->

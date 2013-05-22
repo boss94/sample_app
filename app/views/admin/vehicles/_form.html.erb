@@ -9,7 +9,14 @@
       </ul>
     </div>
   <% end %>
-      <div class="control-group">
+  <p><% concat debug(:make_id) %></p>
+    <div class="control-group">
+      <%= f.label :make, t(:make, :default => "make").capitalize, :class => "control-label" %>
+      <div class="controls">
+        <%= f.collection_select :make_id, Make.all, :id, :caption, :include_blank => true %>
+      </div>
+    </div>
+    <div class="control-group">
       <%= f.label :model, t(:model, :default => "model").capitalize, :class => "control-label" %>
       <div class="controls">
         <%= f.collection_select :model_id, Model.all, :id, :caption, :include_blank => true %>

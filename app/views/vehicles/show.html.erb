@@ -45,7 +45,11 @@
 	  <ul class="slides">
 		<% @vehicle.images.each do |image| %>					
 		    <li>
-		      <img src="<%= image.url %>" />
+		      <%#
+		      	Use this if not using cloudinary
+		      	= image_tag(image.url, :alt => "Sample Image") 
+		      %>
+		      <%= cl_image_tag(image.name, :alt => "Sample Image", :width => 500, :height => 350, :crop => :fill) %>
 		    </li>
 		<% end %>
 	  </ul>

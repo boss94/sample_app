@@ -7,7 +7,7 @@
   <% end %>
 </p>
 
-<%= render :partial => "layouts/mass_inserting", :locals => { :namespace => 'admin', :model_name => 'model', :model_columns => ['name','make'] } %>
+<%#= render :partial => "layouts/mass_inserting", :locals => { :namespace => 'admin', :model_name => 'model', :model_columns => ['name','make'] } %>
 
 <%# Set your scopes below (string in array) %>
 <% scopes = [] %>
@@ -35,6 +35,8 @@
         </select>
         <button class="btn" type="submit"><i class="icon-ok"></i> <%= t(:process, :default => "Process") %></button>
       </div>
+  
+      <p><% concat debug(session[:fields]) %></p>
 
       <%= render :partial => "layouts/modal_columns", :locals => { :model_name => "model", :model_columns => ['name','make','created_at','updated_at'] } %>
 
@@ -52,12 +54,12 @@
                 });
               </script>
             </th>
+            <th <%= visible_column("model", "make_id") %> class="col-make">
+              <%= sorting_header("model", "make_id", "admin") %>
+            </th>
             <th <%= visible_column("model", "name") %> class="col-name">
-  <%= sorting_header("model", "name", "admin") %>
-</th>
-<th <%= visible_column("model", "make") %> class="col-make">
-  <%= sorting_header("model", "make_id", "admin") %>
-</th>
+              <%= sorting_header("model", "name", "admin") %>
+            </th>
 
             <!-- Beautiful_scaffold - AddField - Header - Do not remove -->
             <th <%= visible_column("model", "created_at") %> class="col-created_at">
@@ -79,16 +81,16 @@
           <tr class="line-<%= cycle("1","2") %>">
             <td><%= model.id %></td>
             <td><%= check_box_tag "ids[]",model.id, false, :class => 'cbbatch' %></td>
-              <td <%= visible_column("model", "name") %> class="col-name <%= align_attribute("string") %>">
-      <%= model.name %>
-  </td>
-  <td <%= visible_column("model", "make") %> class="col-make <%= align_attribute("references") %>">
-      <% if not model.make_id.nil? then %>
-        <%= link_to model.make.caption, admin_make_path(model.make_id) %>
-      <% else %>
-        <%= t(:any, :default => "Any") %>
-      <% end %>
-  </td>
+            <td <%= visible_column("model", "make_id") %> class="col-make <%= align_attribute("references") %>">
+                <% if not model.make_id.nil? then %>
+                  <%= link_to model.make.caption, admin_make_path(model.make_id) %>
+                <% else %>
+                  <%= t(:any, :default => "Any") %>
+                <% end %>
+            </td>
+            <td <%= visible_column("model", "name") %> class="col-name <%= align_attribute("string") %>">
+              <%= model.name %>
+            </td>
 <!-- Beautiful_scaffold - AddField - Column - Do not remove -->
             <td <%= visible_column("model", "created_at") %> class="col-created_at <%= align_attribute("datetime") %>">
               <%= l(model.created_at, :format => :long) %>

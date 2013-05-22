@@ -7,7 +7,7 @@
   <% end %>
 </p>
 
-<%= render :partial => "layouts/mass_inserting", :locals => { :namespace => 'admin', :model_name => 'vehicle', :model_columns => ['model','additional_details','registration','registration_year','fuel','mileage','mileage_warranty','price','color','doors','body_type','equipment','notes'] } %>
+<%#= render :partial => "layouts/mass_inserting", :locals => { :namespace => 'admin', :model_name => 'vehicle', :model_columns => ['model','additional_details','registration','registration_year','fuel','mileage','mileage_warranty','price','color','doors','body_type','equipment','notes'] } %>
 
 <%# Set your scopes below (string in array) %>
 <% scopes = [] %>
@@ -54,7 +54,8 @@
                 });
               </script>
             </th>
-            <th <%= visible_column("vehicle", "model") %> class="col-model">
+<th class="col-model">Make</th>
+<th <%= visible_column("vehicle", "model_id") %> class="col-model">
   <%= sorting_header("vehicle", "model_id", "admin") %>
 </th>
 <th <%= visible_column("vehicle", "additional_details") %> class="col-additional_details">
@@ -114,7 +115,14 @@
           <tr class="line-<%= cycle("1","2") %>">
             <td><%= vehicle.id %></td>
             <td><%= check_box_tag "ids[]",vehicle.id, false, :class => 'cbbatch' %></td>
-              <td <%= visible_column("vehicle", "model") %> class="col-model <%= align_attribute("references") %>">
+  <td class="col-model <%= align_attribute("references") %>">
+      <% if not vehicle.model.make_id.nil? then %>
+        <%= link_to vehicle.model.make.caption, admin_make_path(vehicle.model.make_id) %>
+      <% else %>
+        <%= t(:any, :default => "Any") %>
+      <% end %>
+  </td>
+  <td class="col-model <%= align_attribute("references") %>">
       <% if not vehicle.model_id.nil? then %>
         <%= link_to vehicle.model.caption, admin_model_path(vehicle.model_id) %>
       <% else %>
