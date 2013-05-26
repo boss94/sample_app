@@ -97,7 +97,9 @@ class Admin::VehiclesController < BeautifulController
   end
 
   def create
-    debugger
+    #debugger 
+    #hack to ignor the make_id posted by the form
+    params[:vehicle].delete(:make_id)
     @vehicle = Vehicle.create(params[:vehicle])
 
     respond_to do |format|
@@ -124,7 +126,8 @@ class Admin::VehiclesController < BeautifulController
   end
 
   def update
-
+    #hack to ignor the make_id posted by the form
+    params[:vehicle].delete(:make_id)
     respond_to do |format|
       if @vehicle.update_attributes(params[:vehicle])
         format.html { redirect_to admin_vehicle_path(@vehicle), :notice => t(:update_success, :model => "vehicle") }
